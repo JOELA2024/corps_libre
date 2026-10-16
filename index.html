@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutrition Stabilisateur — Joela, Chronobiologiste</title>
+<meta name="description" content="Ny secret hanànana poids stable tsy misy sport sy régime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --prune:#0E3B22;
+    --prune2:#14803A;
+    --rose:#6FCF97;
+    --blush:#F2FBF5;
+    --ink:#111111;
+    --muted:#4F5F55;
+    --red:#D7191F;
+    --yellow:#FFD60A;
+    --green:#1FA34A;
+    --line:#DCEBE1;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--ink);font-family:"Open Sans",Arial,sans-serif;font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  h1,h2,h3{font-family:"Montserrat","Arial Black",Arial,sans-serif;line-height:1.2;margin:0 0 .5em;color:var(--ink)}
+  p{margin:0 0 1.1em}
+  mark{background:linear-gradient(transparent 8%,var(--yellow) 8%,var(--yellow) 92%,transparent 92%);color:inherit;padding:0 .12em;font-weight:700}
+  .red{color:var(--red)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .wide{max-width:1000px}
+  section{padding:64px 0}
+  .center{text-align:center}
+
+  /* ---------- top bar ---------- */
+  .top{background:#111;color:#fff;text-align:center;padding:10px 14px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+  .top b{background:var(--yellow);color:#000;padding:3px 12px;border-radius:4px;margin-left:6px;font-size:1rem;letter-spacing:.04em;white-space:nowrap}
+
+  /* ---------- hero ---------- */
+  .hero{background:#fff;padding:46px 0 56px;text-align:center;background-image:radial-gradient(circle at 50% 0,var(--blush),transparent 60%)}
+  .kicker{display:inline-block;background:#111;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:40px;margin-bottom:26px}
+  .kicker::before,.kicker::after{content:"▼";color:var(--yellow);margin:0 10px;font-size:.7em}
+  .hero h1{font-size:2.9rem;font-weight:900;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero .sub{font-size:1.35rem;color:var(--muted);max-width:640px;margin:18px auto 0}
+  .hero .sub b{color:var(--prune2);border-bottom:3px solid var(--yellow)}
+  .frame{margin:36px auto 0;max-width:640px;background:#fff;border:6px solid #111;border-radius:10px;box-shadow:0 18px 40px rgba(14,59,34,.25);overflow:hidden}
+  .frame img{width:100%}
+  .frame .cap{background:#111;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:.85rem;padding:9px 14px;letter-spacing:.03em}
+
+  .slot{display:none;text-align:center;min-height:240px;padding:90px 20px 0;background:repeating-linear-gradient(45deg,#E3F3E8,#E3F3E8 12px,#EFF9F2 12px,#EFF9F2 24px);color:var(--muted);font-size:.9rem;line-height:1.6}
+  .missing .slot{display:block}
+  .missing > img{display:none}
+
+  /* ---------- letter ---------- */
+  .letter{background:#fff}
+  .letter p{font-size:1.12rem}
+  .letter .pull{border-left:6px solid var(--red);background:#FFF5F5;padding:18px 22px;margin:30px 0;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:1.25rem;line-height:1.45;border-radius:0 8px 8px 0}
+  .letter .blame{background:var(--blush);border:2px dashed var(--rose);border-radius:10px;padding:22px 24px;margin:30px 0;text-align:center}
+  .letter .blame b{font-family:Montserrat,Arial,sans-serif;font-size:1.3rem;color:var(--prune)}
+
+  /* ---------- vs ---------- */
+  .dark{background:linear-gradient(180deg,#111111,#0B1F14);color:#fff}
+  .dark h2{color:#fff}
+  h2.big{font-size:2.1rem;font-weight:900;text-align:center;letter-spacing:-.01em}
+  .intro{text-align:center;max-width:620px;margin:0 auto 38px;opacity:.9}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 18px}
+  .vs .col{border-radius:12px;padding:24px 22px;position:relative}
+  .vs .bad{background:#fff;color:var(--ink);border-top:8px solid var(--red)}
+  .vs .good{background:#fff;color:var(--ink);border-top:8px solid var(--green)}
+  .vs .tag{display:inline-block;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:30px;margin-bottom:12px;color:#fff}
+  .bad .tag{background:var(--red)}
+  .good .tag{background:var(--green)}
+  .vs h3{font-size:1.1rem;font-weight:800}
+  .vs p{font-size:.98rem;margin:0}
+  .vs .num{position:absolute;top:-18px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--yellow);color:#000;font-family:Montserrat,Arial,sans-serif;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+  .vs-title{font-family:Montserrat,Arial,sans-serif;font-weight:800;text-align:center;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px;opacity:.85}
+
+  /* ---------- proofs ---------- */
+  .proofs{background:var(--blush)}
+  .stars{color:#F5A400;letter-spacing:4px;text-align:center;font-size:1.4rem;margin-bottom:6px}
+  .proof{background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(14,59,34,.12);overflow:hidden;margin:30px 0}
+  .proof .shot{background:#E3F3E8}
+  .proof .shot img{width:100%}
+  .proof .body{padding:24px}
+  .proof h3{text-align:center;font-size:1.3rem;font-weight:800;color:var(--prune);margin-bottom:16px}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .ba > div{border-radius:10px;padding:16px;font-size:.96rem;line-height:1.55}
+  .ba b{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.08em;margin-bottom:6px}
+  .ba .b{background:#FFECEC;border:2px solid #F6B7B9}
+  .ba .b b{color:var(--red)}
+  .ba .a{background:#E9F8EF;border:2px solid #A8E0BE}
+  .ba .a b{color:var(--green)}
+  .note{font-size:.85rem;color:var(--muted);font-style:italic;text-align:center;max-width:620px;margin:0 auto}
+
+  /* ---------- method (email style) ---------- */
+  .mail{max-width:560px;margin:0 auto}
+  .mail p{font-size:1.15rem;line-height:1.75;margin:0 0 1.1em}
+  .dg{padding:30px 0;border-top:2px dotted #B8D8C4}
+  .dg:first-of-type{border-top:0}
+  .dg .tag{display:inline-block;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:10px}
+  .dg h3{font-size:1.5rem;font-weight:900;color:var(--prune2);margin:0 0 .7em}
+  .dg .ben{font-weight:700;color:#111;border-left:5px solid var(--green);padding-left:16px;margin-top:1.3em}
+  .dg .ben mark{background:linear-gradient(transparent 8%,#FFF08A 8%,#FFF08A 92%,transparent 92%)}
+  .todo h3{font-size:1.2rem;font-weight:900;color:var(--prune2);margin:0 0 .5em}
+
+  /* ---------- buttons ---------- */
+  .btn{position:relative;display:block;max-width:560px;margin:40px auto 0;text-align:center;text-decoration:none;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.05rem;line-height:1.3;text-transform:uppercase;letter-spacing:.1em;padding:22px 76px 22px 34px;border-radius:14px;border:2px solid transparent;background:linear-gradient(135deg,#0B0B0B,#1E2A22) padding-box,linear-gradient(135deg,#FFE766,#B98900 45%,#FFE766 90%) border-box;box-shadow:0 18px 40px rgba(0,0,0,.28),0 0 0 1px rgba(255,214,10,.15);overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-20deg);animation:shine 4.5s infinite}
+  .btn::after{content:"➜";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#27C25D,#14803A);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(31,163,74,.5);transition:transform .2s}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 24px 50px rgba(0,0,0,.34),0 0 0 1px rgba(255,214,10,.4),0 0 30px rgba(31,163,74,.35)}
+  .btn:hover::after{transform:translateY(-50%) translateX(4px)}
+  .btn small{display:block;font-family:"Open Sans",Arial,sans-serif;font-weight:600;font-size:.78rem;text-transform:none;letter-spacing:.02em;margin-top:5px;color:#cfe9d8}
+  .btn.disabled{background:#d9d9d9;color:#777;border-color:#bbb;box-shadow:none;pointer-events:none}
+  .btn.disabled::before,.btn.disabled::after{display:none}
+  .btn.disabled small{color:#888}
+  @keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+
+  /* ---------- who ---------- */
+  .who{background:#fff}
+  .yn{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .yn .box{border-radius:14px;padding:26px 24px}
+  .yn .yes{background:#EAF8F0;border:3px solid var(--green)}
+  .yn .no{background:#FFF0F0;border:3px solid var(--red)}
+  .yn h3{font-size:1.15rem;font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+  .yes h3{color:var(--green)}
+  .no h3{color:var(--red)}
+  .yn ul{list-style:none;margin:0;padding:0}
+  .yn li{position:relative;padding:9px 0 9px 36px;font-size:.98rem;line-height:1.5;border-bottom:1px dashed rgba(0,0,0,.12)}
+  .yn li:last-child{border-bottom:0}
+  .yes li::before{content:"✔";position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+  .no li::before{content:"✖";position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+
+  /* ---------- get ---------- */
+  .get{background:var(--blush)}
+  .getgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+  .gcard{background:#fff;border-radius:14px;padding:28px 24px;text-align:center;box-shadow:0 8px 22px rgba(14,59,34,.12);border-top:8px solid var(--prune2)}
+  .gcard .ic{width:44px;height:44px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+  .gcard:last-child{grid-column:1/-1}
+  .gcard h3{font-size:1.1rem;font-weight:800;color:var(--prune)}
+  .gcard p{font-size:.98rem;margin:0}
+  .author{margin:40px auto 0;max-width:560px;background:#fff;border:2px solid var(--prune);border-radius:14px;padding:26px;text-align:center}
+  .author .nm{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.2rem;color:var(--prune)}
+  .author q{display:block;font-style:italic;font-size:1.1rem;margin-top:10px;quotes:none}
+
+  /* ---------- price ---------- */
+  .pricing{background:linear-gradient(180deg,#fff,var(--blush))}
+  .order{position:relative;max-width:620px;margin:0 auto;background:#fff;border:4px dashed var(--prune);border-radius:16px;padding:46px 28px 36px;text-align:center;box-shadow:0 20px 50px rgba(14,59,34,.18)}
+  .ribbon{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 26px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+  .order .old{font-size:1.2rem;color:var(--muted);margin:6px 0 0}
+  .order .old s{color:var(--red);font-weight:700;text-decoration-thickness:3px}
+  .order .now{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:4rem;color:var(--prune);line-height:1.1;margin:6px 0 8px}
+  .order .now span{background:linear-gradient(transparent 60%,var(--yellow) 60%)}
+  .order ul{list-style:none;padding:0;margin:20px auto 6px;max-width:400px;text-align:left}
+  .order li{position:relative;padding:8px 0 8px 36px;font-weight:600;border-bottom:1px solid var(--line)}
+  .order li::before{content:"✔";position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+  .pay{display:inline-block;margin-top:14px;background:#F4F4F6;border-radius:8px;padding:8px 16px;font-size:.9rem;color:var(--muted)}
+
+  .paybox{max-width:440px;margin:22px auto 0;background:#F2FBF5;border:2px solid #BFE3CC;border-radius:12px;padding:18px 20px;text-align:left}
+  .paybox .pt{font-family:Montserrat,Arial,sans-serif;font-weight:800;color:var(--prune);margin-bottom:10px}
+  .paybox .row{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;line-height:1.5;margin:0 0 10px}
+  .paybox .row:last-child{margin:0}
+  .paybox .row span{flex:0 0 26px;height:26px;border-radius:50%;background:#111;color:var(--yellow);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .paybox .num{background:var(--yellow);padding:1px 8px;border-radius:4px;white-space:nowrap;display:inline-block;margin-top:4px}
+
+  .refform{max-width:440px;margin:24px auto 0;text-align:left}
+  .refform label{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.9rem;color:var(--prune);margin-bottom:8px}
+  .refform input{width:100%;font-size:1rem;font-family:"Open Sans",Arial,sans-serif;padding:16px 18px;border:2px solid #BFE3CC;border-radius:12px;background:#fff;color:#111;outline:none;transition:border-color .15s,box-shadow .15s}
+  .refform input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(31,163,74,.18)}
+  .refform input.bad{border-color:var(--red);box-shadow:0 0 0 4px rgba(215,25,31,.12)}
+  .refform .err{color:var(--red);font-size:.85rem;font-weight:600;min-height:1.2em;margin-top:6px}
+  .refform .btn{width:100%;margin-top:12px;cursor:pointer;font:inherit;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.1em;appearance:none;-webkit-appearance:none}
+  .refform .after{text-align:center;font-size:.85rem;color:var(--muted);margin:12px 0 0}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:#fff}
+  details{background:#fff;border:2px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+  details[open]{border-color:var(--prune2)}
+  summary{cursor:pointer;list-style:none;padding:18px 54px 18px 20px;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:1rem;color:var(--prune);position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--prune);color:#fff;font-size:1.3rem;display:flex;align-items:center;justify-content:center;line-height:1}
+  details[open] summary::after{content:"–";background:var(--red)}
+  .ans{padding:0 20px 20px;font-size:1rem}
+
+  /* ---------- urgency ---------- */
+  .urgent{background:linear-gradient(180deg,#111111,#0B1F14);border-top:6px solid var(--green);padding:56px 0;text-align:center;color:#fff}
+  .urgent h2{font-size:1.7rem;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:.01em}
+  .urgent p{font-weight:600;max-width:600px;margin:0 auto .8em;color:#E3F1E8}
+  .urgent strong{color:#7BE0A3}
+
+  /* ---------- countdown before price ---------- */
+  .cdsec{background:#fff;padding:44px 0 6px;text-align:center}
+  .cdsec .lbl{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:var(--prune)}
+  .cd{display:flex;justify-content:center;gap:12px;margin:16px 0 0}
+  .cd div{background:linear-gradient(180deg,#111,#1E2A22);color:#fff;border-radius:12px;min-width:82px;padding:14px 6px;border:1px solid #2c3b31;box-shadow:0 8px 18px rgba(0,0,0,.2)}
+  .cd b{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:2.2rem;line-height:1.1;color:#fff}
+  .cd span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#7BE0A3}
+
+  /* ---------- emo + close ---------- */
+  .emo{background:#fff;text-align:center}
+  .emo p{font-size:1.2rem}
+  .emo em{color:var(--prune2);font-weight:700;font-style:normal}
+  .sign{margin-top:36px;text-align:center;font-size:1.1rem}
+  .sign b{font-family:Montserrat,Arial,sans-serif;font-size:1.3rem;color:var(--prune)}
+  .ps{max-width:640px;margin:36px auto 0;background:#FFFBE0;border:3px solid #F5C400;border-radius:12px;padding:20px 24px;font-size:1rem}
+  .ps b{color:var(--red);font-family:Montserrat,Arial,sans-serif}
+
+  footer{background:#0B1F14;color:#b9d3c3;text-align:center;padding:30px 0 40px;font-size:.82rem}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:720px){
+    .cd{gap:8px}
+    .cd div{min-width:68px}
+    .cd b{font-size:1.7rem}
+    .mail p{font-size:1.05rem}
+    .dg h3{font-size:1.3rem}
+    body{font-size:17px}
+    section{padding:46px 0}
+    .hero h1{font-size:1.95rem}
+    .hero .sub{font-size:1.1rem}
+    h2.big{font-size:1.6rem}
+    .vs,.ba,.yn,.getgrid,.mini{grid-template-columns:1fr}
+    .btn{font-size:.95rem;padding:18px 66px 18px 20px}
+    .order .now{font-size:3rem}
+    .ribbon{font-size:.75rem;padding:9px 16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">⏳ Hikatona afaka: <b id="cd">--</b></div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap wide">
+    <div class="kicker">Ho an'ireo manena tena kanefa miverina mitombo indray</div>
+    <h1>Ahoana ny <em>tsy hiverenan'ny lanja intsony</em> rehefa avy manena vatana ?</h1>
+    <p class="sub"><b>Ny secret hanànana poids stable</b> tsy misy sport sy régime</p>
+
+    <div class="frame" id="heroFrame">
+      <img src="images/femme_grosse.jpg" alt="Vehivavy tsy faly mijery ny kibony" onerror="this.parentNode.classList.add('missing')">
+      <div class="slot">Apetraho eto ny sary: <b>images/femme_grosse.jpg</b><br>(vehivavy tsy faly mijery ny kibony / ny lanjany)</div>
+      <div class="cap">▲ Efa niaina an'izany ve ianao ?</div>
+    </div>
+
+    <!-- CTA hero -->
+    <a class="btn" href="#methode">Hampiatra ny méthode</a>
+  </div>
+</header>
+
+<!-- ===================== LETTER ===================== -->
+<section class="letter">
+  <div class="wrap">
+    <p>Rehefa hanena vatana dia lazaina anao foana ireto.</p>
+    <p>Ary mino aho fa anisan'ilay olona efa nanao ireto ianao. Raha efa nanena vatana kanefa tsy nahita vokatra loatra.</p>
+    <p>Fa mihena aloha Ilay vatanao, indrindra Ilay kibonao. AVY eo anefa dia <mark>mistagne amin'izay</mark>, no sady miverina mihitsy vao ajanonao Ilay liste sakafo azonao tany anatin'ireny coaching ireny.</p>
+    <p>Aty am-boalohany mantsy mihena tsara Ilay vatanao. Ary tena manakaiky an'ilay objectif anao mihitsy ianao hoe <mark>-7kg à -10kg</mark>.</p>
+    <p>AVY eo anefa mandeha ny 4 semaine dia Léo ianao, na koa tsy arakao intsony Ilay régime sy fifadian-kanina asaina hataonao. Dia <strong>miverina Ilay lanjanao</strong>.</p>
+    <p>Mandaitra tsara Ary mety tsara Ilay régime asain'ilay coach hataonao.</p>
+    <div class="pull">Fa eo Ilay olana hoe: raha tratra Ilay tanjona, dia <span class="red">ahoana ny tohiny ?</span></div>
+
+    <div class="blame">
+      <p style="margin:0 0 6px">Tsy hanameloka anao aho.</p>
+      <b>Tsy fahadisoanao velively</b>
+      <p style="margin:6px 0 0">raha toa ka tsy voatazonao mihitsy Ilay lanjanao io.</p>
+    </div>
+
+    <p>Fa ny méthode omena anao no <mark>misy faille tsy voajery</mark>.</p>
+    <p>Raha hay Ilay manena, dia aiza Ilay mihazona ?<br>Vita ihany Ilay manala Ilay tavy, fa ahoana no hatao hahatonga azy tsy hiverina eo ?</p>
+    <p>Noho io tsy fahampiana eo amin'ilay fomba fanenam-batana malaza bé io no antony nikarohinay ka nahavitana ity <strong>Nutrition Stabilisateur</strong> ity.</p>
+  </div>
+</section>
+
+<!-- ===================== LIMITES vs SOLUTION ===================== -->
+<section class="dark">
+  <div class="wrap wide">
+    <h2 class="big">Maninona manana fetra ny régime ?</h2>
+    <p class="intro">Tsy hoe tsy mandaitra ny régime. Mihena tokoa ianao. Fa ireto ny fetrany, ary ny valiny tolotry ny Nutrition Stabilisateur:</p>
+
+    <div class="vs">
+      <div class="col bad"><span class="num">1</span><span class="tag">Régime</span>
+        <h3>Manala ilay tavy efa eo fotsiny, fa tsy mitraiter ilay antony mampitombo azy.</h3>
+        <p>Alaivo sary an-tsaina hoe maka seau ianao, alefaso ny robinet dia fenoy rano. Rehefa manomboka feno dia manala rano amin'ny zinga ianao. Mihena ny rano… fa ilay robinet mbola mandeha foana. Ny régime no zinga. Ny tavy no rano. Ilay robinet no mpamokatra tavy.</p></div>
+      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
+        <h3>Ny antony mampitombo no traitena.</h3>
+        <p>Ny fotoana sy ny filaharan'ny sakafo no ovaina, mba hiditra amin'ny <strong>mode brûlage</strong> ny vatana fa tsy hitahiry foana.</p></div>
+    </div>
+
+    <div class="vs">
+      <div class="col bad"><span class="num">2</span><span class="tag">Régime</span>
+        <h3>Mila fifehezan-tena mandrakizay.</h3>
+        <p>Rehefa mandeha ny 4 semaine dia vizana ianao, mahatsiaro voageja (prison doré), dia miala. Normal izany, satria tsy natao hiaina toy izany ny vatana.</p></div>
+      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
+        <h3>Tsy mila fifehezan-tena mandrakizay.</h3>
+        <p>Tsy mifady ianao, tsy cardio isan'andro. Mbola mihinana glucide ihany. Ka azo ampiharina mandritra ny fiainana.</p></div>
+    </div>
+
+    <div class="vs">
+      <div class="col bad"><span class="num">3</span><span class="tag">Régime</span>
+        <h3>Mifanohitra amin'ny vatana.</h3>
+        <p>Rehefa ahenao ny sakafo dia mieritreritra ny vatana fa en crise izy, dia <strong>mitahiry</strong> (mode stockage). Frustration = stress = stockage = graisse.</p></div>
+      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
+        <h3>Miara-mandeha amin'ny vatana.</h3>
+        <p>Natioran'ny vatana mihitsy no mandoro tavy. Ny cycle naturel du corps no arahina, fa tsy miady amin'izany.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREUVES (1) ===================== -->
+<section class="proofs">
+  <div class="wrap">
+    <div class="stars">★★★★★</div>
+    <h2 class="big">Ireto ny vokatra azon'ireo vehivavy</h2>
+
+    <div class="proof">
+      <div class="shot" id="s1"><img src="images/proof%20pp%20(2).jpg" alt="Kibo nihena 11 cm" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof%20pp%20(2).jpg</div></div>
+      <div class="body">
+        <h3>🏅 Kibo nihena 11 cm en 2 SEMAINES</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Madame anakiray mijanona ao an-trano, nikasa ny hanena ilay kibony.</div>
+          <div class="a"><b>😁 APRÈS</b>Nihena <strong>11 cm</strong> tao anatin'ny 02 semaine (tour de taille), ary izao miditra ny 3ème semaine nampiarana ity méthode ity.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="shot" id="s2"><img src="images/proof_2%20copie.jpg" alt="-3 cm, ballonnement afaka" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_2%20copie.jpg</div></div>
+      <div class="body">
+        <h3>🏅 -3 cm, ballonnement sy kibo mizihatra afaka tanteraka</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Tsy mahita tory no sady misy rivotra ka manao ballonnement foana, ary mizihitra foana ilay kibony avy misakafo.</div>
+          <div class="a"><b>😁 APRÈS</b>Afaka ilay rivotra (ballonnement) no sady nahazo forme tsara kokoa.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Ireo vokatra ireo dia azon'ireo vehivavy nampiasa <strong>ity méthode ity</strong>. Tsy mitovy amin'ny rehetra ny vokatra.</p>
+  </div>
+</section>
+
+<!-- ===================== METHODE ===================== -->
+<section id="methode">
+  <div class="wrap">
+    <h2 class="big">Ny méthode</h2>
+    <div class="mail center" style="text-align:center">
+      <p>Tsy régime na sakafo no ao.<br><strong>Fomba fisakafoana</strong> mihitsy Ilay izy,<br>natao hanena vatana <mark>ary koa hitazomana ny lanja</mark><br>(hanena sy hitazona).</p>
+      <p style="font-family:Montserrat,Arial,sans-serif;font-weight:900;color:var(--prune2);text-transform:uppercase;letter-spacing:.05em">Dingana 4 fotsiny ▼</p>
+    </div>
+
+    <div class="mail">
+      <div class="dg">
+        <span class="tag">Dingana 1</span>
+        <h3>Fantaro Ilay vatanao</h3>
+        <p>Aiza ho aiza ny vatana no mandoro tavy automatiquement,<br>ary aiza izy no mitahiry ?</p>
+        <p>(mode brûlage / mode stockage)</p>
+        <p>Io no antsoina hoe <strong>Rythme circadien</strong><br>sy <strong>fenêtre alimentaire</strong>.</p>
+        <p>Tsy manova sakafo aloha ianao any am-boalohany,<br>fa io no ampiasaintsika voalohany<br>hahafantarana Ilay toe-batanao.</p>
+        <p class="ben"><mark>✔ Mba hahatonga anao hatory tsara<br>sy hifoha matanjaka,<br>tsy reradreraka intsony,<br>ary hamela ny vatanao hiditra amin'ny mode brûlage<br>fa tsy hitahiry foana.</mark></p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 2</span>
+        <h3>Amboary ny filaharan'ny sakafo</h3>
+        <p>Inona no sakafo tokony hohaninao <strong>voalohany</strong> ?</p>
+        <p>Tsy mifady ianao.<br>Mbola mihinana glucide ihany.</p>
+        <p><strong>Ny ordre no amboarina.</strong></p>
+        <p class="ben"><mark>✔ Mba hahatonga anao mihinana<br>nefa tsy mizihatra sy tsy misy rivotra intsony<br>ny kibonao rehefa avy misakafo,<br>ary tsy manao régime hitazonana ny lanja.</mark></p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 3</span>
+        <h3>Fantaro ny sakafo stabilisateur</h3>
+        <p>Ny lisitry ny sakafo stabilisateur de poids rehetra.</p>
+        <p>Rehefa hiantsena ianao,<br>iny no hoentina manao achat.</p>
+        <p class="ben"><mark>✔ Mba hahatonga anao voky tsara rehefa mihinana,<br>ka tsy mitady grignotage intsony,<br>ary mora kokoa ny mitazona ny lanja.</mark></p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 4</span>
+        <h3>Hainao ny assiette stabilisateur</h3>
+        <p>Ho hainao ny manamboatra<br>ny lovia mitazona lanja.</p>
+        <p class="ben"><mark>✔ Mba hahatonga ny tour de taille hihena<br>sy hahafahanao mitazona ilay lanja,<br>nefa tsy mila coach isan'andro.</mark></p>
+      </div>
+
+      <p style="text-align:center;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.5rem;color:var(--prune2);margin-top:6px">Izay ihany.</p>
+
+      <div class="dg todo">
+        <h3>👉 Inona no hataonao ?</h3>
+        <p>1. Jereo ny <strong>4 videos</strong><br>(liste, assiette, heure, ordre).</p>
+        <p>2. Arahy ny <strong>Support pratique étape par étape</strong>.</p>
+        <p>3. Ampiharo ao anaty fiainana andavanandro,<br>tsy mila régime, tsy mila cardio isan'andro.</p>
+      </div>
+
+      <div class="dg todo">
+        <h3>⏱ Rahoviana no hitanao ny vokatra ?</h3>
+        <p>Ilay madame tao amin'ny sary etsy ambony<br>dia nahita <strong>-11 cm ao anatin'ny 2 herinandro</strong>,<br>ary izao miditra ny 3ème semaine.</p>
+        <p>Samy hafa ny vatana tsirairay,<br>fa io no fotoana hita tao amin'ireo vokatra.</p>
+        <p>Rehefa tafavoaka ny fanenana,<br>ireo dingana ihany no ampiasaina <strong>hitazomana</strong> ny lanja:<br>tsy mila manomboka indray.</p>
+      </div>
+    </div>
+
+    <!-- CTA 1 : méthode -> prix -->
+    <a class="btn" href="#prix">Hijery ny vidiny</a>
+  </div>
+</section>
+
+<!-- ===================== POUR QUI ===================== -->
+<section class="who">
+  <div class="wrap wide">
+    <h2 class="big">Ho anao ve ity ?</h2>
+    <div class="yn" style="margin-top:34px">
+      <div class="box yes">
+        <h3>✔ Ho anao izao raha…</h3>
+        <ul>
+          <li>Vehivavy manodidina ny 30 taona sy 50 taona ianao ka manana vatana ngeza</li>
+          <li>Efa nanena vatana ianao tamin'ny régime, jeûne na cardio, fa niverina ihany Ilay lanja</li>
+          <li>Léo ianao amin'ny fanaovana régime foana, ary kivy rehefa mandeha ny 3-4 semaine</li>
+          <li>Efa nahavita -5kg hatramin'ny -10kg ianao, kanefa niverina Ilay kibo</li>
+          <li>Lazain'olona foana fa bevohoka ianao kanefa tsy bevohoka akory</li>
+          <li>Te hihazona lanja stable ianao tsy misy fifehezan-tena mafy sy cardio isan'andro</li>
+        </ul>
+      </div>
+      <div class="box no">
+        <h3>✖ Tsy ho anao raha…</h3>
+        <ul>
+          <li>Mitady régime vaovao hanenana haingana ianao</li>
+          <li>Mbola mazoto manao régime strict ary tsy mbola leo</li>
+          <li>Tsy vonona hanova ny fomba fisakafoana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
+<section class="get">
+  <div class="wrap wide">
+    <h2 class="big">Izay hahazoanao</h2>
+    <p style="text-align:center;font-weight:700;margin:0 0 18px">4 videos + Support pratique étape par étape</p>
+    <div class="getgrid">
+      <div class="gcard"><div class="ic">1</div><h3>Liste ny aliment stabilisateur</h3><p><b>Video + Support</b><br>Ny lisitry ny sakafo hoentina miantsena.</p></div>
+      <div class="gcard"><div class="ic">2</div><h3>Formule assiette stabilisateur</h3><p><b>Video</b><br>Ahoana no hamoronana ny lovia mitazona lanja.</p></div>
+      <div class="gcard"><div class="ic">3</div><h3>Heure exactes fihinanana sakafo</h3><p><b>Video</b><br>Ny ora marina hihinanana.</p></div>
+      <div class="gcard"><div class="ic">4</div><h3>Ordre fihinanana sakafo</h3><p><b>Video</b><br>Inona no hohanina aloha ao anaty lovia.</p></div>
+      <div class="gcard"><div class="ic">5</div><h3>7 recettes types</h3><p><b>Support</b><br>Recettes tsotra azo ampiharina avy hatrany.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPTE A REBOURS ===================== -->
+<section class="cdsec">
+  <div class="wrap">
+    <div class="lbl">⏳ Hikatona ny fisoratana anarana afaka:</div>
+    <div class="cd">
+      <div><b id="cd-d">--</b><span>Andro</span></div>
+      <div><b id="cd-h">--</b><span>Ora</span></div>
+      <div><b id="cd-m">--</b><span>Minitra</span></div>
+      <div><b id="cd-s">--</b><span>Segonda</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRIX ===================== -->
+<section class="pricing" id="prix">
+  <div class="wrap">
+    <div class="order">
+      <div class="ribbon">Prix de lancement</div>
+      <p class="old">Vidiny mahazatra: <s>97 000 Ar</s></p>
+      <div class="now"><span>55 000 Ar</span></div>
+      <p style="margin:0;font-weight:600">Indray mividy fotsiny. Anao mandrakizay Ilay fomba.</p>
+      <ul>
+        <li>Liste ny aliment stabilisateur <em>(video + Support)</em></li>
+        <li>Formule assiette stabilisateur <em>(video)</em></li>
+        <li>Heure exactes fihinanana sakafo <em>(video)</em></li>
+        <li>Ordre fihinanana sakafo <em>(video)</em></li>
+        <li>7 recettes types <em>(support)</em></li>
+      </ul>
+      <div class="paybox">
+        <div class="pt">💳 Ahoana ny fandoavana ?</div>
+        <div class="row"><span>1</span><div>Alefaso ny <b>Ar 55 000</b> amin’ny <b>MVola</b> any amin’ny <b class="num">034 71 128 57</b>.</div></div>
+        <div class="row"><span>2</span><div>Soraty etsy ambany ny <b>référence</b></div></div>
+        <div class="row"><span>3</span><div>Tsindrio ity bokotra etsy ambany ity handefasana ny référence amin'ny <b>WhatsApp</b></div></div>
+      </div>
+
+      <!-- Formulaire référence -> WhatsApp -->
+      <form class="refform" id="refForm" novalidate>
+        <label for="ref">Référence an'ny transaction MVola</label>
+        <input id="ref" name="ref" type="text" inputmode="text" autocomplete="off" placeholder="Soraty eto ny référence" required>
+        <div class="err" id="refErr" role="alert"></div>
+        <button class="btn" type="submit">Andefa ny référence avy hatrany</button>
+        <p class="after">Azo idirana avy hatrany ny méthode aorian'ny fandraisana ny référence.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREUVES (suite) ===================== -->
+<section class="proofs">
+  <div class="wrap">
+    <div class="proof">
+      <div class="shot"><img src="images/proof_3%20(1).jpg" alt="Nilamina ny torimaso" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_3%20(1).jpg</div></div>
+      <div class="body">
+        <h3>🏅 Taitra foana amin'ny 1 maraina → nilamina ny torimaso</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Taitra foana manomboka amin'ny 1 maraina, dia amin'ny 5 vao mahita tory. Reradreraka foana mandritra ny tontolo andro.</div>
+          <div class="a"><b>😁 APRÈS</b>Nanomboka nilamina ilay torimaso tapatapaka, ary matanjaka tsara vao mifoha ny maraina.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="shot"><img src="images/proof_5%20(1).jpg" alt="Tour de taille, reradava, brouillard mental afaka" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_5%20(1).jpg</div></div>
+      <div class="shot"><img src="images/proof_4.jpg" alt="Afaka tamin'ny grignotage" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_4.jpg</div></div>
+      <div class="body">
+        <h3>🏅 Tour de taille, reradava, brouillard mental AFAKA</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Tour de taille, reradava, brouillard mental, grignotage.</div>
+          <div class="a"><b>😁 APRÈS</b>Afaka tamin'ny grignotage satria réglé hatramin'ny hormone de satiété, ka voky tsara rehefa mihinana ireo alimentation source rehetra, fa tsy manao régime intsony.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Vokatra azon'ireo vehivavy nampiasa ity méthode ity. Tsy mitovy amin'ny rehetra ny vokatra.</p>
+    <p class="center" style="font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.25rem;color:var(--prune);margin-top:22px">🏆 Ianao no hijoro vavolombelona manaraka.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq">
+  <div class="wrap">
+    <h2 class="big">Fanontaniana mahazatra</h2>
+    <div style="margin-top:30px">
+      <details><summary>Inona no ao anatin'ny Nutrition Stabilisateur ?</summary>
+        <div class="ans">4 videos sy Support pratique étape par étape: liste ny aliment stabilisateur, formule assiette stabilisateur, heure exactes fihinanana sakafo, ordre fihinanana sakafo ary 7 recettes types.</div></details>
+
+      <details><summary>Mijanona ao an-trano aho / miasa isan'andro aho. Mety amiko ve ?</summary>
+        <div class="ans">Eny. Ireo nahazo vokatra dia reny mijanona an-trano sy vehivavy miasa isan'andro. Tsy mila fotoana be na sport ianao: ny fomba fisakafoana no amboarina.</div></details>
+
+      <details><summary>Nihena 11 cm ao anatin'ny 2 herinandro ilay madame. Ho ahy koa ve ?</summary>
+        <div class="ans">Samy hafa ny vatana tsirairay. Ilay madame dia nahita -11 cm tao anatin'ny 2 herinandro. [Ta réponse sur le délai habituel]</div></details>
+
+      <details><summary>Mizihatra foana ny kibony sy misy rivotra (ballonnement) aho. Hiova ve ?</summary>
+        <div class="ans">Ireo vehivavy nahita fiovana dia afaka tamin'ny ballonnement sy ny kibo mizihatra. Tsy mitovy amin'ny rehetra ny vokatra.</div></details>
+
+      <details><summary>Tsy mahita tory aho / taitra amin'ny 1 maraina. Hanampy ve ity ?</summary>
+        <div class="ans">Ilay vehivavy dia nilamina ny torimasony rehefa nanaraka ny cycle naturel du corps ny fisakafoany. Izany no ampiasaintsika eto: ny fotoana sy ny filaharan'ny sakafo.</div></details>
+
+      <details><summary>Mbola mikarakara sakafo foana aho (grignotage) sy reraka. Hiova ve ?</summary>
+        <div class="ans">Ireo nahazo vokatra dia afaka tamin'ny grignotage, reradava ary brouillard mental. Voky tsara izy ireo rehefa mihinana, ary tsy manao régime intsony.</div></details>
+
+      <details><summary>Mila mifady sakafo ve aho ?</summary>
+        <div class="ans">Tsia. Ny ordre no amboarina, tsy ny sakafo.</div></details>
+
+      <details><summary>Mila manao sport ve aho ?</summary>
+        <div class="ans">Tsia, tsy cardio isan'andro.</div></details>
+
+      <details><summary>Efa nanandrana daholo aho.</summary>
+        <div class="ans">Ireo nandramanao dia nifantoka tamin'ny manena. Ity kosa tamin'ny mihazona.</div></details>
+
+      <details><summary>Mbola tsy nanena vatana aho, mety amiko ve ?</summary>
+        <div class="ans">[Ta réponse.]</div></details>
+
+      <details><summary>Azo averina ve ny vola ?</summary>
+        <div class="ans">Tsia, tsy misy remboursement. Ka jereo tsara ny ao anatiny (4 videos + Support) alohan'ny hividianana.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== URGENCE ===================== -->
+<div class="urgent">
+  <div class="wrap">
+    <h2>⏳ Hikatona ny 31 Oktobra ny fisoratana anarana</h2>
+    <p>Aorian'io daty io dia <strong>mikatona</strong> ny tolotra. Ny fisokafana manaraka dia ho amin'ny <strong>vidiny ambony kokoa</strong>, ary tsy fantatra ny daty.</p>
+    <p>Tonga ny fety faran'ny taona. Raha manomboka izao ianao, hainao ny mitazona Ilay lanja alohan'ny fety.</p>
+  </div>
+</div>
+
+<!-- ===================== EMO + CTA 3 ===================== -->
+<section class="emo">
+  <div class="wrap">
+    <p>Alaivo sary an-tsaina hoe atonona anao indray Ilay pantalon jeans anao tamin'ny herintaona iny.</p>
+    <p>Miditra ny toeram-piasana ianao, tsy misy bitsika hoe <em>"Toa bevohoka indray madame izany"</em>.</p>
+    <p>Tsy menatra intsony ianao rehefa mivoaka ny trano.<br>Mankafy mijery fitaratra ianao amin'ilay bika sy forme anao.<br>Ary Ilay vadinao, hiverina ho saropiaro aminao indray.</p>
+    <p>Tsy hoe nanao régime indray ianao.<br>Fa <mark>mitazona</mark> Ilay lanja.</p>
+    <p style="font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.5rem;color:var(--prune)">Miankina aminao Ilay izy.</p>
+    <p>Raha anisan'ilay vehivavy mitady hirika hivoahana amin'io effort bé io ianao, dia…</p>
+
+    <!-- CTA 3 : après FAQ -> prix -->
+    <a class="btn" href="#prix">Hijery ny vidiny</a>
+
+    <div class="sign">
+      <p style="margin:0">Mirary forme ho anao aho,</p>
+      <b>Joela</b> — Chronobiologiste
+    </div>
+    <div class="ps"><b>PS:</b> Hikatona ny 31 Oktobra ny tolotra. Ny fisokafana manaraka dia amin'ny vidiny ambony kokoa.</div>
+  </div>
+</section>
+
+<footer><div class="wrap">© Joela — Chronobiologiste · Nutrition Stabilisateur</div></footer>
+
+<script>
+  // ---- A MODIFIER ----
+  var WA_NUMBER = "261347112857";                           // WhatsApp (034 71 128 57) au format international
+  var DEADLINE = new Date("2026-10-31T23:59:59+03:00");     // fin des inscriptions (heure de Madagascar)
+  // --------------------
+
+  function pad(n){ return n < 10 ? "0" + n : "" + n; }
+  function closed(){ return new Date() > DEADLINE; }
+
+  function tick(){
+    var diff = DEADLINE - new Date();
+    var el = document.getElementById("cd");
+    if (diff <= 0){
+      el.textContent = "MIKATONA";
+      ["d","h","m","s"].forEach(function(k){ document.getElementById("cd-" + k).textContent = "00"; });
+      var all = document.querySelectorAll(".btn");
+      for (var i = 0; i < all.length; i++){
+        all[i].classList.add("disabled");
+        all[i].innerHTML = "Mikatona ny fisoratana anarana<small>Miandrasa ny fisokafana manaraka</small>";
+      }
+      return;
+    }
+    var d = Math.floor(diff / 86400000), h = Math.floor(diff % 86400000 / 3600000),
+        m = Math.floor(diff % 3600000 / 60000), s = Math.floor(diff % 60000 / 1000);
+    el.textContent = d + "j  " + pad(h) + "h  " + pad(m) + "m  " + pad(s) + "s";
+    document.getElementById("cd-d").textContent = pad(d);
+    document.getElementById("cd-h").textContent = pad(h);
+    document.getElementById("cd-m").textContent = pad(m);
+    document.getElementById("cd-s").textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  // ---- Envoi de la référence vers WhatsApp ----
+  document.getElementById("refForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    if (closed()) return;
+    var input = document.getElementById("ref");
+    var err = document.getElementById("refErr");
+    var ref = input.value.trim();
+    if (ref.length < 4){
+      input.classList.add("bad");
+      err.textContent = "Soraty ny référence an'ny transaction MVola aloha.";
+      input.focus();
+      return;
+    }
+    input.classList.remove("bad"); err.textContent = "";
+    var msg = "Nutrition Stabilisateur ity ny reference : " + ref;
+    window.location.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+  });
+  document.getElementById("ref").addEventListener("input", function(){
+    this.classList.remove("bad"); document.getElementById("refErr").textContent = "";
+  });
+</script>
+</body>
+</html>
