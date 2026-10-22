@@ -34,6 +34,47 @@
   section{padding:64px 0}
   .center{text-align:center}
 
+
+  .objs{background:#fff}
+  .objs .mail p{margin:0 0 1.5em}
+  .objs .q{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:800;color:var(--prune2);font-size:1.12rem;line-height:1.4;margin-bottom:4px}
+
+  /* ---------- conversion fixes ---------- */
+  .byline{display:inline-flex;align-items:center;gap:10px;margin:20px auto 0;font-size:.95rem;color:var(--muted)}
+  .byline .av{width:38px;height:38px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .byline b{color:var(--ink)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px 14px;justify-content:center;margin:22px auto 0;padding:0;list-style:none;max-width:680px}
+  .chips li{background:#EAF8F0;border:2px solid #BFE3CC;border-radius:40px;padding:7px 16px;font-weight:700;font-size:.92rem;color:var(--prune)}
+  .chips li::before{content:"✔ ";color:var(--green)}
+
+  .proofbar{background:#111;color:#fff;padding:34px 0;text-align:center}
+  .proofbar h2{color:#fff;font-size:1.25rem;font-weight:800;margin:0 0 6px}
+  .proofbar .sub2{margin:0 auto 20px;color:#cfe3d6;font-size:.98rem;max-width:560px}
+  .pbtiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:700px;margin:0 auto}
+  .pbtile{background:linear-gradient(180deg,#1b2a21,#111);border:1px solid #2c3b31;border-radius:12px;padding:18px 14px}
+  .pbtile .n{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.9rem;color:var(--yellow);line-height:1.1}
+  .pbtile .l{font-size:.85rem;color:#cfe3d6;margin-top:2px}
+  .pbtile q{display:block;margin-top:10px;font-size:.82rem;color:#fff;opacity:.85;font-style:italic;quotes:none}
+
+  .cdsec .urgline{max-width:560px;margin:18px auto 0;font-weight:600;font-size:1rem}
+  .cdsec .urgline strong{color:var(--red)}
+
+  .copybtn{display:inline-block;margin-left:8px;border:2px solid #111;background:#fff;color:#111;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:3px 10px;cursor:pointer;vertical-align:middle}
+  .copybtn.ok{background:var(--green);border-color:var(--green);color:#fff}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin:18px auto 0;padding:0;list-style:none;font-size:.88rem;font-weight:600;color:var(--muted)}
+  .order .trust{max-width:none;text-align:center}
+  .order .trust li{padding:0;border:0;font-weight:600}
+  .order .trust li::before{content:none}
+  .askwa{display:block;max-width:440px;margin:22px auto 0;text-align:center;font-size:.95rem;color:var(--muted)}
+  .askwa a{color:var(--prune2);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+
+  .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#111;padding:10px 14px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+  .stick.show{display:block}
+  .stick a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:560px;margin:0 auto;padding:14px 18px;border-radius:12px;background:linear-gradient(180deg,#1b1b1b,#0a0a0a);border:2px solid var(--yellow);color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+  .stick a::after{content:"➜";background:var(--green);color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem}
+  body.has-stick footer{padding-bottom:90px}
+  @media (max-width:720px){.pbtiles{grid-template-columns:1fr}.pbtile .n{font-size:1.6rem}}
+
   /* ---------- top bar ---------- */
   .top{background:#111;color:#fff;text-align:center;padding:10px 14px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
   .top b{background:var(--yellow);color:#000;padding:3px 12px;border-radius:4px;margin-left:6px;font-size:1rem;letter-spacing:.04em;white-space:nowrap}
@@ -102,8 +143,6 @@
   .dg:first-of-type{border-top:0}
   .dg .tag{display:inline-block;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:10px}
   .dg h3{font-size:1.5rem;font-weight:900;color:var(--prune2);margin:0 0 .7em}
-  .dg .ben{font-weight:700;color:#111;border-left:5px solid var(--green);padding-left:16px;margin-top:1.3em}
-  .dg .ben mark{background:linear-gradient(transparent 8%,#FFF08A 8%,#FFF08A 92%,transparent 92%)}
   .todo h3{font-size:1.2rem;font-weight:900;color:var(--prune2);margin:0 0 .5em}
 
   /* ---------- buttons ---------- */
@@ -135,12 +174,21 @@
 
   /* ---------- get ---------- */
   .get{background:var(--blush)}
-  .getgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
-  .gcard{background:#fff;border-radius:14px;padding:28px 24px;text-align:center;box-shadow:0 8px 22px rgba(14,59,34,.12);border-top:8px solid var(--prune2)}
-  .gcard .ic{width:44px;height:44px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-  .gcard:last-child{grid-column:1/-1}
-  .gcard h3{font-size:1.1rem;font-weight:800;color:var(--prune)}
-  .gcard p{font-size:.98rem;margin:0}
+  .getgrid{display:flex;flex-direction:column;gap:18px;max-width:700px;margin:34px auto 0;position:relative}
+  .getgrid::before{content:"";position:absolute;left:25px;top:30px;bottom:30px;width:3px;background:repeating-linear-gradient(to bottom,var(--prune2) 0 8px,transparent 8px 14px);opacity:.45}
+  .gcard{position:relative;display:flex;gap:18px;align-items:flex-start;text-align:left}
+  .gcard .ic{flex:none;width:52px;height:52px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border:4px solid var(--blush);box-shadow:0 0 0 2px var(--prune2);margin:0;position:relative;z-index:1}
+  .gcard .gb{flex:1;min-width:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(14,59,34,.12);border:1px solid #D5EBDD}
+  .gcard h3{font-size:1.2rem;font-weight:900;color:var(--prune);line-height:1.3;margin:0;padding:20px 22px 6px}
+  .gcard p{margin:0;font-size:1rem}
+  .gcard .dl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:0 22px 14px;color:var(--muted);font-size:.95rem}
+  .gcard .dl b{background:var(--yellow);color:#111;font-family:Montserrat,Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:30px}
+  .gcard .bn,.gcard .im{display:flex;gap:12px;align-items:flex-start;padding:14px 22px;line-height:1.5}
+  .gcard .bn{background:var(--blush);color:#111;font-weight:700;border-top:1px solid #D5EBDD}
+  .gcard .bn i,.gcard .im i{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;margin-top:1px}
+  .gcard .bn i{background:var(--green);color:#fff}
+  .gcard .im{background:var(--prune);color:#fff;font-weight:700}
+  .gcard .im i{background:var(--yellow);color:#111}
   .author{margin:40px auto 0;max-width:560px;background:#fff;border:2px solid var(--prune);border-radius:14px;padding:26px;text-align:center}
   .author .nm{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.2rem;color:var(--prune)}
   .author q{display:block;font-style:italic;font-size:1.1rem;margin-top:10px;quotes:none}
@@ -199,7 +247,9 @@
   .cd span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#7BE0A3}
 
   /* ---------- emo + close ---------- */
-  .emo{background:#fff;text-align:center}
+  .emo{background:#fff;text-align:left}
+  .emo .btn{text-align:center}
+  .emo .sign{text-align:left}
   .emo p{font-size:1.2rem}
   .emo em{color:var(--prune2);font-weight:700;font-style:normal}
   .sign{margin-top:36px;text-align:center;font-size:1.1rem}
@@ -221,7 +271,13 @@
     .hero h1{font-size:1.95rem}
     .hero .sub{font-size:1.1rem}
     h2.big{font-size:1.6rem}
-    .vs,.ba,.yn,.getgrid,.mini{grid-template-columns:1fr}
+    .vs,.ba,.yn,.mini{grid-template-columns:1fr}
+    .getgrid::before{left:19px}
+    .gcard{gap:12px}
+    .gcard .ic{width:40px;height:40px;font-size:1.05rem;border-width:3px}
+    .gcard h3{font-size:1.08rem;padding:16px 16px 6px}
+    .gcard .dl{padding:0 16px 12px}
+    .gcard .bn,.gcard .im{padding:12px 16px;gap:10px}
     .btn{font-size:.95rem;padding:18px 66px 18px 20px}
     .order .now{font-size:3rem}
     .ribbon{font-size:.75rem;padding:9px 16px}
@@ -249,162 +305,6 @@
     <a class="btn" href="#methode">Hampiatra ny méthode</a>
   </div>
 </header>
-
-<!-- ===================== LETTER ===================== -->
-<section class="letter">
-  <div class="wrap">
-    <p>Rehefa hanena vatana dia lazaina anao foana ireto.</p>
-    <p>Ary mino aho fa anisan'ilay olona efa nanao ireto ianao. Raha efa nanena vatana kanefa tsy nahita vokatra loatra.</p>
-    <p>Fa mihena aloha Ilay vatanao, indrindra Ilay kibonao. AVY eo anefa dia <mark>mistagne amin'izay</mark>, no sady miverina mihitsy vao ajanonao Ilay liste sakafo azonao tany anatin'ireny coaching ireny.</p>
-    <p>Aty am-boalohany mantsy mihena tsara Ilay vatanao. Ary tena manakaiky an'ilay objectif anao mihitsy ianao hoe <mark>-7kg à -10kg</mark>.</p>
-    <p>AVY eo anefa mandeha ny 4 semaine dia Léo ianao, na koa tsy arakao intsony Ilay régime sy fifadian-kanina asaina hataonao. Dia <strong>miverina Ilay lanjanao</strong>.</p>
-    <p>Mandaitra tsara Ary mety tsara Ilay régime asain'ilay coach hataonao.</p>
-    <div class="pull">Fa eo Ilay olana hoe: raha tratra Ilay tanjona, dia <span class="red">ahoana ny tohiny ?</span></div>
-
-    <div class="blame">
-      <p style="margin:0 0 6px">Tsy hanameloka anao aho.</p>
-      <b>Tsy fahadisoanao velively</b>
-      <p style="margin:6px 0 0">raha toa ka tsy voatazonao mihitsy Ilay lanjanao io.</p>
-    </div>
-
-    <p>Fa ny méthode omena anao no <mark>misy faille tsy voajery</mark>.</p>
-    <p>Raha hay Ilay manena, dia aiza Ilay mihazona ?<br>Vita ihany Ilay manala Ilay tavy, fa ahoana no hatao hahatonga azy tsy hiverina eo ?</p>
-    <p>Noho io tsy fahampiana eo amin'ilay fomba fanenam-batana malaza bé io no antony nikarohinay ka nahavitana ity <strong>Nutrition Stabilisateur</strong> ity.</p>
-  </div>
-</section>
-
-<!-- ===================== LIMITES vs SOLUTION ===================== -->
-<section class="dark">
-  <div class="wrap wide">
-    <h2 class="big">Maninona manana fetra ny régime ?</h2>
-    <p class="intro">Tsy hoe tsy mandaitra ny régime. Mihena tokoa ianao. Fa ireto ny fetrany, ary ny valiny tolotry ny Nutrition Stabilisateur:</p>
-
-    <div class="vs">
-      <div class="col bad"><span class="num">1</span><span class="tag">Régime</span>
-        <h3>Manala ilay tavy efa eo fotsiny, fa tsy mitraiter ilay antony mampitombo azy.</h3>
-        <p>Alaivo sary an-tsaina hoe maka seau ianao, alefaso ny robinet dia fenoy rano. Rehefa manomboka feno dia manala rano amin'ny zinga ianao. Mihena ny rano… fa ilay robinet mbola mandeha foana. Ny régime no zinga. Ny tavy no rano. Ilay robinet no mpamokatra tavy.</p></div>
-      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
-        <h3>Ny antony mampitombo no traitena.</h3>
-        <p>Ny fotoana sy ny filaharan'ny sakafo no ovaina, mba hiditra amin'ny <strong>mode brûlage</strong> ny vatana fa tsy hitahiry foana.</p></div>
-    </div>
-
-    <div class="vs">
-      <div class="col bad"><span class="num">2</span><span class="tag">Régime</span>
-        <h3>Mila fifehezan-tena mandrakizay.</h3>
-        <p>Rehefa mandeha ny 4 semaine dia vizana ianao, mahatsiaro voageja (prison doré), dia miala. Normal izany, satria tsy natao hiaina toy izany ny vatana.</p></div>
-      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
-        <h3>Tsy mila fifehezan-tena mandrakizay.</h3>
-        <p>Tsy mifady ianao, tsy cardio isan'andro. Mbola mihinana glucide ihany. Ka azo ampiharina mandritra ny fiainana.</p></div>
-    </div>
-
-    <div class="vs">
-      <div class="col bad"><span class="num">3</span><span class="tag">Régime</span>
-        <h3>Mifanohitra amin'ny vatana.</h3>
-        <p>Rehefa ahenao ny sakafo dia mieritreritra ny vatana fa en crise izy, dia <strong>mitahiry</strong> (mode stockage). Frustration = stress = stockage = graisse.</p></div>
-      <div class="col good"><span class="tag">Nutrition Stabilisateur</span>
-        <h3>Miara-mandeha amin'ny vatana.</h3>
-        <p>Natioran'ny vatana mihitsy no mandoro tavy. Ny cycle naturel du corps no arahina, fa tsy miady amin'izany.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PREUVES (1) ===================== -->
-<section class="proofs">
-  <div class="wrap">
-    <div class="stars">★★★★★</div>
-    <h2 class="big">Ireto ny vokatra azon'ireo vehivavy</h2>
-
-    <div class="proof">
-      <div class="shot" id="s1"><img src="images/proof%20pp%20(2).jpg" alt="Kibo nihena 11 cm" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof%20pp%20(2).jpg</div></div>
-      <div class="body">
-        <h3>🏅 Kibo nihena 11 cm en 2 SEMAINES</h3>
-        <div class="ba">
-          <div class="b"><b>😢 AVANT</b>Madame anakiray mijanona ao an-trano, nikasa ny hanena ilay kibony.</div>
-          <div class="a"><b>😁 APRÈS</b>Nihena <strong>11 cm</strong> tao anatin'ny 02 semaine (tour de taille), ary izao miditra ny 3ème semaine nampiarana ity méthode ity.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="proof">
-      <div class="shot" id="s2"><img src="images/proof_2%20copie.jpg" alt="-3 cm, ballonnement afaka" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_2%20copie.jpg</div></div>
-      <div class="body">
-        <h3>🏅 -3 cm, ballonnement sy kibo mizihatra afaka tanteraka</h3>
-        <div class="ba">
-          <div class="b"><b>😢 AVANT</b>Tsy mahita tory no sady misy rivotra ka manao ballonnement foana, ary mizihitra foana ilay kibony avy misakafo.</div>
-          <div class="a"><b>😁 APRÈS</b>Afaka ilay rivotra (ballonnement) no sady nahazo forme tsara kokoa.</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="note">Ireo vokatra ireo dia azon'ireo vehivavy nampiasa <strong>ity méthode ity</strong>. Tsy mitovy amin'ny rehetra ny vokatra.</p>
-  </div>
-</section>
-
-<!-- ===================== METHODE ===================== -->
-<section id="methode">
-  <div class="wrap">
-    <h2 class="big">Ny méthode</h2>
-    <div class="mail center" style="text-align:center">
-      <p>Tsy régime na sakafo no ao.<br><strong>Fomba fisakafoana</strong> mihitsy Ilay izy,<br>natao hanena vatana <mark>ary koa hitazomana ny lanja</mark><br>(hanena sy hitazona).</p>
-      <p style="font-family:Montserrat,Arial,sans-serif;font-weight:900;color:var(--prune2);text-transform:uppercase;letter-spacing:.05em">Dingana 4 fotsiny ▼</p>
-    </div>
-
-    <div class="mail">
-      <div class="dg">
-        <span class="tag">Dingana 1</span>
-        <h3>Fantaro Ilay vatanao</h3>
-        <p>Aiza ho aiza ny vatana no mandoro tavy automatiquement,<br>ary aiza izy no mitahiry ?</p>
-        <p>(mode brûlage / mode stockage)</p>
-        <p>Io no antsoina hoe <strong>Rythme circadien</strong><br>sy <strong>fenêtre alimentaire</strong>.</p>
-        <p>Tsy manova sakafo aloha ianao any am-boalohany,<br>fa io no ampiasaintsika voalohany<br>hahafantarana Ilay toe-batanao.</p>
-        <p class="ben"><mark>✔ Mba hahatonga anao hatory tsara<br>sy hifoha matanjaka,<br>tsy reradreraka intsony,<br>ary hamela ny vatanao hiditra amin'ny mode brûlage<br>fa tsy hitahiry foana.</mark></p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 2</span>
-        <h3>Amboary ny filaharan'ny sakafo</h3>
-        <p>Inona no sakafo tokony hohaninao <strong>voalohany</strong> ?</p>
-        <p>Tsy mifady ianao.<br>Mbola mihinana glucide ihany.</p>
-        <p><strong>Ny ordre no amboarina.</strong></p>
-        <p class="ben"><mark>✔ Mba hahatonga anao mihinana<br>nefa tsy mizihatra sy tsy misy rivotra intsony<br>ny kibonao rehefa avy misakafo,<br>ary tsy manao régime hitazonana ny lanja.</mark></p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 3</span>
-        <h3>Fantaro ny sakafo stabilisateur</h3>
-        <p>Ny lisitry ny sakafo stabilisateur de poids rehetra.</p>
-        <p>Rehefa hiantsena ianao,<br>iny no hoentina manao achat.</p>
-        <p class="ben"><mark>✔ Mba hahatonga anao voky tsara rehefa mihinana,<br>ka tsy mitady grignotage intsony,<br>ary mora kokoa ny mitazona ny lanja.</mark></p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 4</span>
-        <h3>Hainao ny assiette stabilisateur</h3>
-        <p>Ho hainao ny manamboatra<br>ny lovia mitazona lanja.</p>
-        <p class="ben"><mark>✔ Mba hahatonga ny tour de taille hihena<br>sy hahafahanao mitazona ilay lanja,<br>nefa tsy mila coach isan'andro.</mark></p>
-      </div>
-
-      <p style="text-align:center;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.5rem;color:var(--prune2);margin-top:6px">Izay ihany.</p>
-
-      <div class="dg todo">
-        <h3>👉 Inona no hataonao ?</h3>
-        <p>1. Jereo ny <strong>4 videos</strong><br>(liste, assiette, heure, ordre).</p>
-        <p>2. Arahy ny <strong>Support pratique étape par étape</strong>.</p>
-        <p>3. Ampiharo ao anaty fiainana andavanandro,<br>tsy mila régime, tsy mila cardio isan'andro.</p>
-      </div>
-
-      <div class="dg todo">
-        <h3>⏱ Rahoviana no hitanao ny vokatra ?</h3>
-        <p>Ilay madame tao amin'ny sary etsy ambony<br>dia nahita <strong>-11 cm ao anatin'ny 2 herinandro</strong>,<br>ary izao miditra ny 3ème semaine.</p>
-        <p>Samy hafa ny vatana tsirairay,<br>fa io no fotoana hita tao amin'ireo vokatra.</p>
-        <p>Rehefa tafavoaka ny fanenana,<br>ireo dingana ihany no ampiasaina <strong>hitazomana</strong> ny lanja:<br>tsy mila manomboka indray.</p>
-      </div>
-    </div>
-
-    <!-- CTA 1 : méthode -> prix -->
-    <a class="btn" href="#prix">Hijery ny vidiny</a>
-  </div>
-</section>
 
 <!-- ===================== POUR QUI ===================== -->
 <section class="who">
@@ -434,17 +334,126 @@
   </div>
 </section>
 
+<!-- ===================== LETTER ===================== -->
+<section class="letter">
+  <div class="wrap">
+    <p>Rehefa hanena vatana dia lazaina anao foana ireto.</p>
+    <p>Ary mino aho fa anisan'ilay olona efa nanao ireto ianao. Raha efa nanena vatana kanefa tsy nahita vokatra loatra.</p>
+    <p>Fa mihena aloha Ilay vatanao, indrindra Ilay kibonao. AVY eo anefa dia <mark>mistagne amin'izay</mark>, no sady miverina mihitsy vao ajanonao Ilay liste sakafo azonao tany anatin'ireny coaching ireny.</p>
+    <p>Aty am-boalohany mantsy mihena tsara Ilay vatanao. Ary tena manakaiky an'ilay objectif anao mihitsy ianao hoe <mark>-7kg à -10kg</mark>.</p>
+    <p>AVY eo anefa mandeha ny 4 semaine dia Léo ianao, na koa tsy arakao intsony Ilay régime sy fifadian-kanina asaina hataonao. Dia <strong>miverina Ilay lanjanao</strong>.</p>
+    <p>Mandaitra tsara Ary mety tsara Ilay régime asain'ilay coach hataonao.</p>
+    <div class="pull">Fa eo Ilay olana hoe: raha tratra Ilay tanjona, dia <span class="red">ahoana ny tohiny ?</span></div>
+
+    <p>Tsy hanameloka anao aho.<br><strong>Tsy fahadisoanao velively</strong> raha toa ka tsy voatazonao mihitsy Ilay lanjanao io.</p>
+
+    <p>Fa ny méthode omena anao no <mark>misy faille tsy voajery</mark>.</p>
+    <p>Raha hay Ilay manena, dia aiza Ilay mihazona ?<br>Vita ihany Ilay manala Ilay tavy, fa ahoana no hatao hahatonga azy tsy hiverina eo ?</p>
+    <p>Noho io tsy fahampiana eo amin'ilay fomba fanenam-batana malaza bé io no antony nikarohinay ka nahavitana ity <strong>Nutrition Stabilisateur</strong> ity.</p>
+  </div>
+</section>
+
+<!-- ===================== METHODE ===================== -->
+<section id="methode">
+  <div class="wrap">
+    <div class="mail">
+      <h2 class="big" style="text-align:left">Tsy fahaizana manena no tsy ampy anao. <span class="red">Fahaizana mitazona.</span></h2>
+      <p>Nampianarina anao ny <strong>fomba hanena</strong>.<br>Tsy nampianarina anao ny <strong>fomba hitazona</strong>.</p>
+      <p>Izay no <mark>fiovana</mark>:</p>
+
+      <div class="dg">
+        <span class="tag">Taloha</span>
+        <p>Efa nanao régime sy cardio isan'andro ianao. Nihena tsara ny vatanao, ary vitanao ny 1 volana na 2 volana.</p>
+        <p>Mahatsiaro ho voageja ianao, tsy mahatsapa liberté intsony, ary mitondra frustration aminao ny vatanao. Vizana ary kivy ianao, kanefa mbola miezaka ihany.</p>
+        <p>Rehefa mandeha ny fotoana dia Léo ianao, mi-lache, ary miverina ilay tavy sy ilay kibo. Indraindray aza ambony kokoa noho ny taloha.</p>
+        <p>Normal izany, satria mifantoka amin'ny sakafo sy ny fanenana azy ny méthode, ka forcenao ny vatana. Rehefa mihena ny sakafo dia <mark>mitahiry</mark> ny vatana (mode stockage). Tsy natao hiaina toy izany izy.</p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Izao</span>
+        <p>Tsy ny sakafo intsony no ifantohana, fa ny <strong>vatana</strong>. Ny fotoana sy ny filaharan'ny sakafo no amboarina, mba hiditra amin'ny <strong>mode brûlage</strong> ny vatana.</p>
+        <p>Mandaitra izany satria otran'ny mangataka zavatra amin'olona: raha forcenao izy dia tsy manome, fa raha resahina milamina dia manome. Izay koa ny vatanao.</p>
+        <p class="ben">✔ Ny vokatra: <mark>tsy mila fifehezan-tena isan'andro</mark> ianao, <mark>tsy mila cardio mandreraka</mark>, ary <mark>tsy mila manomboka indray</mark>.</p>
+      </div>
+
+    </div>
+
+    <div class="mail">
+      <p>Tsy régime na sakafo no ao.<br><strong>Fomba fisakafoana</strong> mihitsy Ilay izy,<br>natao hanena vatana <mark>ary koa hitazomana ny lanja</mark><br>(hanena sy hitazona).</p>
+      <h2 class="big" style="text-align:left;margin-top:8px">Ireo <span class="red">dingana 4</span> hidiranao amin'ny mode brûlage</h2>
+    </div>
+
+    <div class="mail">
+      <div class="dg">
+        <span class="tag">Dingana 1</span>
+        <h3>Fantaro Ilay vatanao</h3>
+        <p>Fantaro aiza ho aiza ny vatana no mandoro tavy, ary aiza izy no mitahiry (mode brûlage / mode stockage). Io no hampiasaintsika voalohany: ny <strong>rythme circadien</strong> sy ny <strong>fenêtre alimentaire</strong>.</p>
+        <p>Satria mandoro sy mitahiry araka ny <strong>cycle naturel 24 h</strong> ny vatana, ary io no fototra rehetra.</p>
+        <p class="ben">✔ Mba hahatonga anao <mark>hatory tsara</mark>, <mark>hifoha matanjaka</mark>, ary hamela ny vatanao hiditra amin'ny <mark>mode brûlage</mark> fa tsy hitahiry foana.</p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 2</span>
+        <h3>Amboary ny filaharan'ny sakafo</h3>
+        <p>Inona no sakafo tokony hohaninao <strong>voalohany</strong> ? Tsy mifady ianao, ary mbola mihinana glucide ihany. <strong>Ny ordre no amboarina.</strong></p>
+        <p>Satria tsy ny sakafo no olana, fa ny fotoana sy ny filaharan'ny fihinanana azy.</p>
+        <p class="ben">✔ Mba hahatonga anao mihinana nefa <mark>tsy mizihatra sy tsy misy rivotra intsony ny kibonao</mark> rehefa avy misakafo, ary <mark>tsy manao régime</mark> hitazonana ny lanja.</p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 3</span>
+        <h3>Mihinàna ny sakafo stabilisateur</h3>
+        <p>Ny lisitry ny sakafo stabilisateur de poids rehetra. Rehefa hiantsena ianao, iny no hoentina manao achat.</p>
+        <p>Satria rehefa voky tsara ianao, dia tsy noana ny vatanao, ary mahay mandoro tavy izy.</p>
+        <p class="ben">✔ Mba hahatonga anao <mark>voky tsara</mark> rehefa mihinana, ka <mark>tsy mitady grignotage intsony</mark>, ary mora kokoa ny mitazona ny lanja.</p>
+      </div>
+
+      <div class="dg">
+        <span class="tag">Dingana 4</span>
+        <h3>Ampiharo ny formule secret an'ny assiette, sady mampihena no mitazona lanja</h3>
+        <p>Ho hainao ny formule secret hanamboarana ny lovia mitazona lanja.</p>
+        <p>Satria lovia <strong>feno</strong> no mameno ny zavatra rehetra ilain'ny vatana, ka tsy misy hanoanana bé tampoka intsony.</p>
+        <p class="ben">✔ Mba hahatonga ny <mark>tour de taille hihena</mark> sy hahafahanao <mark>mitazona ilay lanja</mark>, nefa tsy mila coach isan'andro.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== NUTRITION STABILISATEUR + OBJECTIONS ===================== -->
+<section class="objs">
+  <div class="wrap">
+    <div class="mail">
+      <p>Ka izay indrindra no ao ato anatin'ny <strong>« programme nutrition stabilisateur »</strong>, mba hanampy anao hanena sy hitazona ny lanja mety aminao.</p>
+      <p>Programme efa vita andrana ity ary <mark>voaporofo tamin'ny vehivavy maro teto Madagasikara</mark>, tsy nisy régime sy sport natao hanefa…</p>
+
+      <h2 class="big" style="text-align:left">Nutrition <span class="red">Stabilisateur</span></h2>
+      <p>Fomba fisakafoana mampiditra ny vatana amin'ny <strong>mode brûlage</strong>, natao <mark>hanena lanja sady hitazona azy</mark>.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
 <section class="get">
   <div class="wrap wide">
-    <h2 class="big">Izay hahazoanao</h2>
+    <h2 class="big">Ny ho azonao</h2>
     <p style="text-align:center;font-weight:700;margin:0 0 18px">4 videos + Support pratique étape par étape</p>
     <div class="getgrid">
-      <div class="gcard"><div class="ic">1</div><h3>Liste ny aliment stabilisateur</h3><p><b>Video + Support</b><br>Ny lisitry ny sakafo hoentina miantsena.</p></div>
-      <div class="gcard"><div class="ic">2</div><h3>Formule assiette stabilisateur</h3><p><b>Video</b><br>Ahoana no hamoronana ny lovia mitazona lanja.</p></div>
-      <div class="gcard"><div class="ic">3</div><h3>Heure exactes fihinanana sakafo</h3><p><b>Video</b><br>Ny ora marina hihinanana.</p></div>
-      <div class="gcard"><div class="ic">4</div><h3>Ordre fihinanana sakafo</h3><p><b>Video</b><br>Inona no hohanina aloha ao anaty lovia.</p></div>
-      <div class="gcard"><div class="ic">5</div><h3>7 recettes types</h3><p><b>Support</b><br>Recettes tsotra azo ampiharina avy hatrany.</p></div>
+      <div class="gcard"><div class="ic">1</div><div class="gb"><h3>Fantaro Ilay vatanao</h3><p class="dl"><b>Video</b><span>Heure exactes fihinanana sakafo</span></p><p class="bn"><i>✔</i><span>Hatory tsara ianao, ary hifoha matanjaka.</span></p><p class="im"><i>➜</i><span>Miditra amin'ny mode brûlage ny vatanao, ka mihena ny lanja sy ny kibo.</span></p></div></div>
+      <div class="gcard"><div class="ic">2</div><div class="gb"><h3>Amboary ny filaharan'ny sakafo</h3><p class="dl"><b>Video</b><span>Ordre fihinanana sakafo</span></p><p class="bn"><i>✔</i><span>Tsy mizihatra sy tsy misy rivotra intsony ny kibonao rehefa avy misakafo.</span></p><p class="im"><i>➜</i><span>Hita aloha ny fihenan'ny tour de taille.</span></p></div></div>
+      <div class="gcard"><div class="ic">3</div><div class="gb"><h3>Mihinàna ny sakafo stabilisateur</h3><p class="dl"><b>Video + Support</b><span>Liste ny aliment stabilisateur</span></p><p class="bn"><i>✔</i><span>Voky tsara ianao, ka tsy mitady grignotage intsony.</span></p><p class="im"><i>➜</i><span>Mihena ianao nefa tsy mifady hanina, ary mora kokoa ny mitazona ny lanja.</span></p></div></div>
+      <div class="gcard"><div class="ic">4</div><div class="gb"><h3>Ampiharo ny formule secret an'ny assiette</h3><p class="dl"><b>Video</b><span>Formule assiette</span></p><p class="bn"><i>✔</i><span>Tsy misy hanoanana bé tampoka intsony.</span></p><p class="im"><i>➜</i><span>Mihena sady mitazona lanja ianao, tsy mila coach isan'andro.</span></p></div></div>
+      <div class="gcard"><div class="ic">5</div><div class="gb"><h3>7 recettes types</h3><p class="dl"><b>Support</b><span>Recettes tsotra azo ampiharina avy hatrany.</span></p><p class="bn"><i>✔</i><span>Tsy mila mieritreritra intsony ianao.</span></p><p class="im"><i>➜</i><span>Manaraka tsy tapaka ianao, ka tonga amin'ilay vatana irianao.</span></p></div></div>
+    </div>
+
+    <div class="mail" style="margin-top:34px">
+      <div class="dg todo">
+        <h3>⏱ Rahoviana no hitanao ny vokatra ?</h3>
+        <p>Ilay madame tao amin'ny sary etsy ambany<br>dia nahita <strong>-11 cm ao anatin'ny 2 herinandro</strong>,<br>ary izao miditra ny 3ème semaine.</p>
+        <p>Samy hafa ny vatana tsirairay,<br>fa io no fotoana hita tao amin'ireo vokatra.</p>
+        <p>Rehefa tafavoaka ny fanenana,<br>ireo dingana ihany no ampiasaina <strong>hitazomana</strong> ny lanja:<br>tsy mila manomboka indray.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -459,6 +468,7 @@
       <div><b id="cd-m">--</b><span>Minitra</span></div>
       <div><b id="cd-s">--</b><span>Segonda</span></div>
     </div>
+    <p class="urgline">Aorian'io daty io <strong>mikatona</strong> ny tolotra, ary <strong>ambony kokoa</strong> ny vidiny manaraka.</p>
   </div>
 </section>
 
@@ -479,7 +489,7 @@
       </ul>
       <div class="paybox">
         <div class="pt">💳 Ahoana ny fandoavana ?</div>
-        <div class="row"><span>1</span><div>Alefaso ny <b>Ar 55 000</b> amin’ny <b>MVola</b> any amin’ny <b class="num">034 71 128 57</b>.</div></div>
+        <div class="row"><span>1</span><div>Alefaso ny <b>Ar 55 000</b> amin’ny <b>MVola</b> any amin’ny <b class="num" id="mvnum">034 71 128 57</b> <button type="button" class="copybtn" id="copyBtn">Adikao</button></div></div>
         <div class="row"><span>2</span><div>Soraty etsy ambany ny <b>référence</b></div></div>
         <div class="row"><span>3</span><div>Tsindrio ity bokotra etsy ambany ity handefasana ny référence amin'ny <b>WhatsApp</b></div></div>
       </div>
@@ -492,13 +502,40 @@
         <button class="btn" type="submit">Andefa ny référence avy hatrany</button>
         <p class="after">Azo idirana avy hatrany ny méthode aorian'ny fandraisana ny référence.</p>
       </form>
+      <ul class="trust"><li>⚡ Accès avy hatrany</li><li>🎥 4 videos + Support</li><li>💬 Fanampiana amin'ny WhatsApp</li></ul>
+      <p class="askwa">Mbola misalasala ? <a id="askLink" href="#">Soraty amin'ny WhatsApp ny fanontanianao</a></p>
     </div>
   </div>
 </section>
 
-<!-- ===================== PREUVES (suite) ===================== -->
-<section class="proofs">
+<!-- ===================== PREUVES (toutes regroupées) ===================== -->
+<section class="proofs" id="preuves">
   <div class="wrap">
+    <div class="stars">★★★★★</div>
+    <h2 class="big">Ireto ny vokatra azon'ireo vehivavy</h2>
+
+    <div class="proof">
+      <div class="shot" id="s1"><img src="images/proof%20pp%20(2).jpg" alt="Kibo nihena 11 cm" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof%20pp%20(2).jpg</div></div>
+      <div class="body">
+        <h3>🏅 Kibo nihena 11 cm en 2 SEMAINES</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Madame anakiray mijanona ao an-trano, nikasa ny hanena ilay kibony.</div>
+          <div class="a"><b>😁 APRÈS</b>Nihena <strong>11 cm</strong> tao anatin'ny 02 semaine (tour de taille), ary izao miditra ny 3ème semaine nampiarana ity méthode ity.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="shot" id="s2"><img src="images/proof_2%20copie.jpg" alt="-3 cm, ballonnement afaka" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_2%20copie.jpg</div></div>
+      <div class="body">
+        <h3>🏅 -3 cm, ballonnement sy kibo mizihatra afaka tanteraka</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Tsy mahita tory no sady misy rivotra ka manao ballonnement foana, ary mizihitra foana ilay kibony avy misakafo.</div>
+          <div class="a"><b>😁 APRÈS</b>Afaka ilay rivotra (ballonnement) no sady nahazo forme tsara kokoa.</div>
+        </div>
+      </div>
+    </div>
+
     <div class="proof">
       <div class="shot"><img src="images/proof_3%20(1).jpg" alt="Nilamina ny torimaso" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_3%20(1).jpg</div></div>
       <div class="body">
@@ -522,49 +559,8 @@
       </div>
     </div>
 
-    <p class="note">Vokatra azon'ireo vehivavy nampiasa ity méthode ity. Tsy mitovy amin'ny rehetra ny vokatra.</p>
+    <p class="note">Ireo vokatra ireo dia azon'ireo vehivavy nampiasa <strong>ity méthode ity</strong>. Tsy mitovy amin'ny rehetra ny vokatra.</p>
     <p class="center" style="font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.25rem;color:var(--prune);margin-top:22px">🏆 Ianao no hijoro vavolombelona manaraka.</p>
-  </div>
-</section>
-
-<!-- ===================== FAQ ===================== -->
-<section class="faq">
-  <div class="wrap">
-    <h2 class="big">Fanontaniana mahazatra</h2>
-    <div style="margin-top:30px">
-      <details><summary>Inona no ao anatin'ny Nutrition Stabilisateur ?</summary>
-        <div class="ans">4 videos sy Support pratique étape par étape: liste ny aliment stabilisateur, formule assiette stabilisateur, heure exactes fihinanana sakafo, ordre fihinanana sakafo ary 7 recettes types.</div></details>
-
-      <details><summary>Mijanona ao an-trano aho / miasa isan'andro aho. Mety amiko ve ?</summary>
-        <div class="ans">Eny. Ireo nahazo vokatra dia reny mijanona an-trano sy vehivavy miasa isan'andro. Tsy mila fotoana be na sport ianao: ny fomba fisakafoana no amboarina.</div></details>
-
-      <details><summary>Nihena 11 cm ao anatin'ny 2 herinandro ilay madame. Ho ahy koa ve ?</summary>
-        <div class="ans">Samy hafa ny vatana tsirairay. Ilay madame dia nahita -11 cm tao anatin'ny 2 herinandro. [Ta réponse sur le délai habituel]</div></details>
-
-      <details><summary>Mizihatra foana ny kibony sy misy rivotra (ballonnement) aho. Hiova ve ?</summary>
-        <div class="ans">Ireo vehivavy nahita fiovana dia afaka tamin'ny ballonnement sy ny kibo mizihatra. Tsy mitovy amin'ny rehetra ny vokatra.</div></details>
-
-      <details><summary>Tsy mahita tory aho / taitra amin'ny 1 maraina. Hanampy ve ity ?</summary>
-        <div class="ans">Ilay vehivavy dia nilamina ny torimasony rehefa nanaraka ny cycle naturel du corps ny fisakafoany. Izany no ampiasaintsika eto: ny fotoana sy ny filaharan'ny sakafo.</div></details>
-
-      <details><summary>Mbola mikarakara sakafo foana aho (grignotage) sy reraka. Hiova ve ?</summary>
-        <div class="ans">Ireo nahazo vokatra dia afaka tamin'ny grignotage, reradava ary brouillard mental. Voky tsara izy ireo rehefa mihinana, ary tsy manao régime intsony.</div></details>
-
-      <details><summary>Mila mifady sakafo ve aho ?</summary>
-        <div class="ans">Tsia. Ny ordre no amboarina, tsy ny sakafo.</div></details>
-
-      <details><summary>Mila manao sport ve aho ?</summary>
-        <div class="ans">Tsia, tsy cardio isan'andro.</div></details>
-
-      <details><summary>Efa nanandrana daholo aho.</summary>
-        <div class="ans">Ireo nandramanao dia nifantoka tamin'ny manena. Ity kosa tamin'ny mihazona.</div></details>
-
-      <details><summary>Mbola tsy nanena vatana aho, mety amiko ve ?</summary>
-        <div class="ans">[Ta réponse.]</div></details>
-
-      <details><summary>Azo averina ve ny vola ?</summary>
-        <div class="ans">Tsia, tsy misy remboursement. Ka jereo tsara ny ao anatiny (4 videos + Support) alohan'ny hividianana.</div></details>
-    </div>
   </div>
 </section>
 
@@ -598,6 +594,8 @@
   </div>
 </section>
 
+<div class="stick" id="stick"><a href="#prix">Hampiatra ny méthode</a></div>
+
 <footer><div class="wrap">© Joela — Chronobiologiste · Nutrition Stabilisateur</div></footer>
 
 <script>
@@ -615,6 +613,7 @@
     if (diff <= 0){
       el.textContent = "MIKATONA";
       ["d","h","m","s"].forEach(function(k){ document.getElementById("cd-" + k).textContent = "00"; });
+      var sb = document.getElementById("stick"); if (sb) sb.style.display = "none";
       var all = document.querySelectorAll(".btn");
       for (var i = 0; i < all.length; i++){
         all[i].classList.add("disabled");
@@ -631,6 +630,29 @@
     document.getElementById("cd-s").textContent = pad(s);
   }
   tick(); setInterval(tick, 1000);
+
+  // ---- Copier le numéro MVola ----
+  var cb = document.getElementById("copyBtn");
+  if (cb) cb.addEventListener("click", function(){
+    var num = "0347112857";
+    function done(){ cb.textContent = "Voadika ✔"; cb.classList.add("ok"); setTimeout(function(){ cb.textContent = "Adikao"; cb.classList.remove("ok"); }, 2000); }
+    try { navigator.clipboard.writeText(num).then(done, done); } catch(e){ done(); }
+  });
+
+  // ---- Question avant achat -> WhatsApp ----
+  document.getElementById("askLink").href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Manana fanontaniana aho momba ny Nutrition Stabilisateur");
+
+  // ---- Barre CTA collante : visible après le hero, cachée sur le prix ----
+  (function(){
+    var bar = document.getElementById("stick");
+    var hero = document.querySelector(".hero"), prix = document.getElementById("prix");
+    if (!bar || !("IntersectionObserver" in window)) return;
+    document.body.classList.add("has-stick");
+    var heroOut = false, prixIn = false;
+    function upd(){ bar.classList.toggle("show", heroOut && !prixIn && !closed()); }
+    new IntersectionObserver(function(e){ heroOut = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; upd(); }).observe(hero);
+    new IntersectionObserver(function(e){ prixIn = e[0].isIntersecting; upd(); }).observe(prix);
+  })();
 
   // ---- Envoi de la référence vers WhatsApp ----
   document.getElementById("refForm").addEventListener("submit", function(e){
