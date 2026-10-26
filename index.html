@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nutrition Stabilisateur — Joela, Chronobiologiste</title>
+<title>Chrono-nutrition — Joela, Chronobiologiste</title>
 <meta name="description" content="Ny secret hanànana poids stable tsy misy sport sy régime.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --prune:#0E3B22;
-    --prune2:#14803A;
-    --rose:#6FCF97;
-    --blush:#F2FBF5;
-    --ink:#111111;
-    --muted:#4F5F55;
-    --red:#D7191F;
-    --yellow:#FFD60A;
-    --green:#1FA34A;
-    --line:#DCEBE1;
+    --prune:#0B4A20;
+    --prune2:#1F6B30;
+    --rose:#C5D88A;
+    --blush:#FDF1E6;
+    --ink:#0B2A16;
+    --muted:#55665A;
+    --red:#C0392B;
+    --yellow:#A6C13A;
+    --green:#62881C;
+    --line:#EADFCB;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -41,25 +41,25 @@
 
   /* ---------- conversion fixes ---------- */
   .byline{display:inline-flex;align-items:center;gap:10px;margin:20px auto 0;font-size:.95rem;color:var(--muted)}
-  .byline .av{width:38px;height:38px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .byline .av{width:38px;height:38px;border-radius:50%;background:#0B2A16;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;display:flex;align-items:center;justify-content:center}
   .byline b{color:var(--ink)}
   .chips{display:flex;flex-wrap:wrap;gap:10px 14px;justify-content:center;margin:22px auto 0;padding:0;list-style:none;max-width:680px}
-  .chips li{background:#EAF8F0;border:2px solid #BFE3CC;border-radius:40px;padding:7px 16px;font-weight:700;font-size:.92rem;color:var(--prune)}
+  .chips li{background:#F1F5DC;border:2px solid #D6E1A6;border-radius:40px;padding:7px 16px;font-weight:700;font-size:.92rem;color:var(--prune)}
   .chips li::before{content:"✔ ";color:var(--green)}
 
-  .proofbar{background:#111;color:#fff;padding:34px 0;text-align:center}
+  .proofbar{background:#0B2A16;color:#fff;padding:34px 0;text-align:center}
   .proofbar h2{color:#fff;font-size:1.25rem;font-weight:800;margin:0 0 6px}
-  .proofbar .sub2{margin:0 auto 20px;color:#cfe3d6;font-size:.98rem;max-width:560px}
+  .proofbar .sub2{margin:0 auto 20px;color:#DDE8C3;font-size:.98rem;max-width:560px}
   .pbtiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:700px;margin:0 auto}
-  .pbtile{background:linear-gradient(180deg,#1b2a21,#111);border:1px solid #2c3b31;border-radius:12px;padding:18px 14px}
+  .pbtile{background:linear-gradient(180deg,#123D1E,#0B2A16);border:1px solid #1F5A2E;border-radius:12px;padding:18px 14px}
   .pbtile .n{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.9rem;color:var(--yellow);line-height:1.1}
-  .pbtile .l{font-size:.85rem;color:#cfe3d6;margin-top:2px}
+  .pbtile .l{font-size:.85rem;color:#DDE8C3;margin-top:2px}
   .pbtile q{display:block;margin-top:10px;font-size:.82rem;color:#fff;opacity:.85;font-style:italic;quotes:none}
 
   .cdsec .urgline{max-width:560px;margin:18px auto 0;font-weight:600;font-size:1rem}
   .cdsec .urgline strong{color:var(--red)}
 
-  .copybtn{display:inline-block;margin-left:8px;border:2px solid #111;background:#fff;color:#111;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:3px 10px;cursor:pointer;vertical-align:middle}
+  .copybtn{display:inline-block;margin-left:8px;border:2px solid #0B2A16;background:#fff;color:#0B2A16;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:3px 10px;cursor:pointer;vertical-align:middle}
   .copybtn.ok{background:var(--green);border-color:var(--green);color:#fff}
   .trust{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin:18px auto 0;padding:0;list-style:none;font-size:.88rem;font-weight:600;color:var(--muted)}
   .order .trust{max-width:none;text-align:center}
@@ -68,30 +68,30 @@
   .askwa{display:block;max-width:440px;margin:22px auto 0;text-align:center;font-size:.95rem;color:var(--muted)}
   .askwa a{color:var(--prune2);font-weight:800;text-decoration:underline;text-underline-offset:3px}
 
-  .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#111;padding:10px 14px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+  .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#0B2A16;padding:10px 14px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
   .stick.show{display:block}
-  .stick a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:560px;margin:0 auto;padding:14px 18px;border-radius:12px;background:linear-gradient(180deg,#1b1b1b,#0a0a0a);border:2px solid var(--yellow);color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+  .stick a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:560px;margin:0 auto;padding:14px 18px;border-radius:12px;background:linear-gradient(180deg,#0B2A16,#0B2A16);border:2px solid var(--yellow);color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
   .stick a::after{content:"➜";background:var(--green);color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem}
   body.has-stick footer{padding-bottom:90px}
   @media (max-width:720px){.pbtiles{grid-template-columns:1fr}.pbtile .n{font-size:1.6rem}}
 
   /* ---------- top bar ---------- */
-  .top{background:#111;color:#fff;text-align:center;padding:10px 14px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+  .top{background:#0B2A16;color:#fff;text-align:center;padding:10px 14px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
   .top b{background:var(--yellow);color:#000;padding:3px 12px;border-radius:4px;margin-left:6px;font-size:1rem;letter-spacing:.04em;white-space:nowrap}
 
   /* ---------- hero ---------- */
   .hero{background:#fff;padding:46px 0 56px;text-align:center;background-image:radial-gradient(circle at 50% 0,var(--blush),transparent 60%)}
-  .kicker{display:inline-block;background:#111;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:40px;margin-bottom:26px}
+  .kicker{display:inline-block;background:#0B2A16;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:40px;margin-bottom:26px}
   .kicker::before,.kicker::after{content:"▼";color:var(--yellow);margin:0 10px;font-size:.7em}
   .hero h1{font-size:2.9rem;font-weight:900;letter-spacing:-.02em}
   .hero h1 em{font-style:normal;color:var(--red)}
   .hero .sub{font-size:1.35rem;color:var(--muted);max-width:640px;margin:18px auto 0}
   .hero .sub b{color:var(--prune2);border-bottom:3px solid var(--yellow)}
-  .frame{margin:36px auto 0;max-width:640px;background:#fff;border:6px solid #111;border-radius:10px;box-shadow:0 18px 40px rgba(14,59,34,.25);overflow:hidden}
+  .frame{margin:36px auto 0;max-width:640px;background:#fff;border:6px solid #0B2A16;border-radius:10px;box-shadow:0 18px 40px rgba(11,74,32,.25);overflow:hidden}
   .frame img{width:100%}
-  .frame .cap{background:#111;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:.85rem;padding:9px 14px;letter-spacing:.03em}
+  .frame .cap{background:#0B2A16;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:.85rem;padding:9px 14px;letter-spacing:.03em}
 
-  .slot{display:none;text-align:center;min-height:240px;padding:90px 20px 0;background:repeating-linear-gradient(45deg,#E3F3E8,#E3F3E8 12px,#EFF9F2 12px,#EFF9F2 24px);color:var(--muted);font-size:.9rem;line-height:1.6}
+  .slot{display:none;text-align:center;min-height:240px;padding:90px 20px 0;background:repeating-linear-gradient(45deg,#F5E9D8,#F5E9D8 12px,#FBF3EA 12px,#FBF3EA 24px);color:var(--muted);font-size:.9rem;line-height:1.6}
   .missing .slot{display:block}
   .missing > img{display:none}
 
@@ -103,7 +103,7 @@
   .letter .blame b{font-family:Montserrat,Arial,sans-serif;font-size:1.3rem;color:var(--prune)}
 
   /* ---------- vs ---------- */
-  .dark{background:linear-gradient(180deg,#111111,#0B1F14);color:#fff}
+  .dark{background:linear-gradient(180deg,#0B2A16,#072E14);color:#fff}
   .dark h2{color:#fff}
   h2.big{font-size:2.1rem;font-weight:900;text-align:center;letter-spacing:-.01em}
   .intro{text-align:center;max-width:620px;margin:0 auto 38px;opacity:.9}
@@ -121,18 +121,19 @@
 
   /* ---------- proofs ---------- */
   .proofs{background:var(--blush)}
-  .stars{color:#F5A400;letter-spacing:4px;text-align:center;font-size:1.4rem;margin-bottom:6px}
-  .proof{background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(14,59,34,.12);overflow:hidden;margin:30px 0}
-  .proof .shot{background:#E3F3E8}
+  .stars{color:#8FAE2A;letter-spacing:4px;text-align:center;font-size:1.4rem;margin-bottom:6px}
+  .proof{background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(11,74,32,.12);overflow:hidden;margin:30px 0}
+  .proof .shot{background:#F5E9D8}
   .proof .shot img{width:100%}
   .proof .body{padding:24px}
+  .proof .quote{font-size:1.05rem;line-height:1.6;text-align:center;font-style:italic;margin:0}
   .proof h3{text-align:center;font-size:1.3rem;font-weight:800;color:var(--prune);margin-bottom:16px}
   .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .ba > div{border-radius:10px;padding:16px;font-size:.96rem;line-height:1.55}
   .ba b{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.08em;margin-bottom:6px}
-  .ba .b{background:#FFECEC;border:2px solid #F6B7B9}
+  .ba .b{background:#F4F2F3;border:2px solid #D9D3D6}
   .ba .b b{color:var(--red)}
-  .ba .a{background:#E9F8EF;border:2px solid #A8E0BE}
+  .ba .a{background:#F1F5DC;border:2px solid #D6E1A6}
   .ba .a b{color:var(--green)}
   .note{font-size:.85rem;color:var(--muted);font-style:italic;text-align:center;max-width:620px;margin:0 auto}
 
@@ -140,19 +141,19 @@
   .sp{display:block;height:.6em}
   .mail{max-width:560px;margin:0 auto}
   .mail p{font-size:1.15rem;line-height:1.75;margin:0 0 1.1em}
-  .dg{padding:30px 0;border-top:2px dotted #B8D8C4}
+  .dg{padding:30px 0;border-top:2px dotted #E0D3BC}
   .dg:first-of-type{border-top:0}
-  .dg .tag{display:inline-block;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:10px}
+  .dg .tag{display:inline-block;background:#0B2A16;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:10px}
   .dg h3{font-size:1.5rem;font-weight:900;color:var(--prune2);margin:0 0 .7em}
   .todo h3{font-size:1.2rem;font-weight:900;color:var(--prune2);margin:0 0 .5em}
 
   /* ---------- buttons ---------- */
-  .btn{position:relative;display:block;max-width:560px;margin:40px auto 0;text-align:center;text-decoration:none;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.05rem;line-height:1.3;text-transform:uppercase;letter-spacing:.1em;padding:22px 76px 22px 34px;border-radius:14px;border:2px solid transparent;background:linear-gradient(135deg,#0B0B0B,#1E2A22) padding-box,linear-gradient(135deg,#FFE766,#B98900 45%,#FFE766 90%) border-box;box-shadow:0 18px 40px rgba(0,0,0,.28),0 0 0 1px rgba(255,214,10,.15);overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .btn{position:relative;display:block;max-width:560px;margin:40px auto 0;text-align:center;text-decoration:none;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.05rem;line-height:1.3;text-transform:uppercase;letter-spacing:.1em;padding:22px 76px 22px 34px;border-radius:14px;border:2px solid transparent;background:linear-gradient(135deg,#0B2A16,#123D1E) padding-box,linear-gradient(135deg,#CFE08A,#62881C 45%,#CFE08A 90%) border-box;box-shadow:0 18px 40px rgba(0,0,0,.28),0 0 0 1px rgba(166,193,58,.15);overflow:hidden;transition:transform .2s,box-shadow .2s}
   .btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-20deg);animation:shine 4.5s infinite}
-  .btn::after{content:"➜";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#27C25D,#14803A);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(31,163,74,.5);transition:transform .2s}
-  .btn:hover{transform:translateY(-3px);box-shadow:0 24px 50px rgba(0,0,0,.34),0 0 0 1px rgba(255,214,10,.4),0 0 30px rgba(31,163,74,.35)}
+  .btn::after{content:"➜";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5C8A22,#1F6B30);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(98,136,28,.5);transition:transform .2s}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 24px 50px rgba(0,0,0,.34),0 0 0 1px rgba(166,193,58,.4),0 0 30px rgba(98,136,28,.35)}
   .btn:hover::after{transform:translateY(-50%) translateX(4px)}
-  .btn small{display:block;font-family:"Open Sans",Arial,sans-serif;font-weight:600;font-size:.78rem;text-transform:none;letter-spacing:.02em;margin-top:5px;color:#cfe9d8}
+  .btn small{display:block;font-family:"Open Sans",Arial,sans-serif;font-weight:600;font-size:.78rem;text-transform:none;letter-spacing:.02em;margin-top:5px;color:#DDE8C3}
   .btn.disabled{background:#d9d9d9;color:#777;border-color:#bbb;box-shadow:none;pointer-events:none}
   .btn.disabled::before,.btn.disabled::after{display:none}
   .btn.disabled small{color:#888}
@@ -162,7 +163,7 @@
   .who{background:#fff}
   .yn{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   .yn .box{border-radius:14px;padding:26px 24px}
-  .yn .yes{background:#EAF8F0;border:3px solid var(--green)}
+  .yn .yes{background:#F1F5DC;border:3px solid var(--green)}
   .yn .no{background:#FFF0F0;border:3px solid var(--red)}
   .yn h3{font-size:1.15rem;font-weight:900;text-transform:uppercase;letter-spacing:.02em}
   .yes h3{color:var(--green)}
@@ -178,26 +179,38 @@
   .getgrid{display:flex;flex-direction:column;gap:18px;max-width:700px;margin:34px auto 0;position:relative}
   .getgrid::before{content:"";position:absolute;left:25px;top:30px;bottom:30px;width:3px;background:repeating-linear-gradient(to bottom,var(--prune2) 0 8px,transparent 8px 14px);opacity:.45}
   .gcard{position:relative;display:flex;gap:18px;align-items:flex-start;text-align:left}
-  .gcard .ic{flex:none;width:52px;height:52px;border-radius:50%;background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border:4px solid var(--blush);box-shadow:0 0 0 2px var(--prune2);margin:0;position:relative;z-index:1}
-  .gcard .gb{flex:1;min-width:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(14,59,34,.12);border:1px solid #D5EBDD}
+  .gcard .ic{flex:none;width:52px;height:52px;border-radius:50%;background:#0B2A16;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border:4px solid var(--blush);box-shadow:0 0 0 2px var(--prune2);margin:0;position:relative;z-index:1}
+  .gcard .gb{flex:1;min-width:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(11,74,32,.12);border:1px solid #EADFCB}
   .gcard h3{font-size:1.2rem;font-weight:900;color:var(--prune);line-height:1.3;margin:0;padding:20px 22px 6px}
   .gcard p{margin:0;font-size:1rem}
   .gcard .dl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:0 22px 14px;color:var(--muted);font-size:.95rem}
-  .gcard .dl b{background:var(--yellow);color:#111;font-family:Montserrat,Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:30px}
+  .gcard .dl b{background:var(--yellow);color:#0B2A16;font-family:Montserrat,Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:30px}
+  .gcard .val{display:flex;justify-content:space-between;align-items:center;background:var(--prune);color:#fff;padding:12px 22px;font-weight:700}
+  .gcard .val b{color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.1rem}
+  .gcard.bonus .ic{background:var(--yellow);color:#0B2A16;border-color:var(--blush)}
+  .gcard.bonus .gb{border:2px solid var(--yellow)}
+  .tot{max-width:700px;margin:22px auto 0;background:#fff;border-radius:16px;border:1px solid #EADFCB;box-shadow:0 10px 26px rgba(11,74,32,.12);overflow:hidden}
+  .tot div{display:flex;justify-content:space-between;padding:14px 22px;font-weight:700;border-top:1px solid #F5E9D8}
+  .tot div:first-child{border-top:0}
+  .tot .all{background:var(--yellow);color:#0B2A16;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.1rem}
+  .tot .all s{color:var(--red);text-decoration-thickness:3px}
+  .tot .pay-now{background:var(--prune);color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.1rem;line-height:1.35;align-items:center;gap:14px}
+  .tot .pay-now b{white-space:nowrap}
+  .tot .pay-now b{color:var(--yellow);font-size:1.6rem}
   .gcard .bn,.gcard .im{display:flex;gap:12px;align-items:flex-start;padding:14px 22px;line-height:1.5}
-  .gcard .bn{background:var(--blush);color:#111;font-weight:700;border-top:1px solid #D5EBDD}
+  .gcard .bn{background:var(--blush);color:#0B2A16;font-weight:700;border-top:1px solid #EADFCB}
   .gcard .bn i,.gcard .im i{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;margin-top:1px}
   .gcard .bn i{background:var(--green);color:#fff}
   .gcard .im{background:var(--prune);color:#fff;font-weight:700}
-  .gcard .im i{background:var(--yellow);color:#111}
+  .gcard .im i{background:var(--yellow);color:#0B2A16}
   .author{margin:40px auto 0;max-width:560px;background:#fff;border:2px solid var(--prune);border-radius:14px;padding:26px;text-align:center}
   .author .nm{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.2rem;color:var(--prune)}
   .author q{display:block;font-style:italic;font-size:1.1rem;margin-top:10px;quotes:none}
 
   /* ---------- price ---------- */
   .pricing{background:linear-gradient(180deg,#fff,var(--blush))}
-  .order{position:relative;max-width:620px;margin:0 auto;background:#fff;border:4px dashed var(--prune);border-radius:16px;padding:46px 28px 36px;text-align:center;box-shadow:0 20px 50px rgba(14,59,34,.18)}
-  .ribbon{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#111;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 26px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+  .order{position:relative;max-width:620px;margin:0 auto;background:#fff;border:4px dashed var(--prune);border-radius:16px;padding:46px 28px 36px;text-align:center;box-shadow:0 20px 50px rgba(11,74,32,.18)}
+  .ribbon{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#0B2A16;color:var(--yellow);font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 26px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.3)}
   .order .old{font-size:1.2rem;color:var(--muted);margin:6px 0 0}
   .order .old s{color:var(--red);font-weight:700;text-decoration-thickness:3px}
   .order .now{font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:4rem;color:var(--prune);line-height:1.1;margin:6px 0 8px}
@@ -207,18 +220,18 @@
   .order li::before{content:"✔";position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center}
   .pay{display:inline-block;margin-top:14px;background:#F4F4F6;border-radius:8px;padding:8px 16px;font-size:.9rem;color:var(--muted)}
 
-  .paybox{max-width:440px;margin:22px auto 0;background:#F2FBF5;border:2px solid #BFE3CC;border-radius:12px;padding:18px 20px;text-align:left}
+  .paybox{max-width:440px;margin:22px auto 0;background:#FDF1E6;border:2px solid #D6E1A6;border-radius:12px;padding:18px 20px;text-align:left}
   .paybox .pt{font-family:Montserrat,Arial,sans-serif;font-weight:800;color:var(--prune);margin-bottom:10px}
   .paybox .row{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;line-height:1.5;margin:0 0 10px}
   .paybox .row:last-child{margin:0}
-  .paybox .row span{flex:0 0 26px;height:26px;border-radius:50%;background:#111;color:var(--yellow);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .paybox .row span{flex:0 0 26px;height:26px;border-radius:50%;background:#0B2A16;color:var(--yellow);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
   .paybox .num{background:var(--yellow);padding:1px 8px;border-radius:4px;white-space:nowrap;display:inline-block;margin-top:4px}
 
   .refform{max-width:440px;margin:24px auto 0;text-align:left}
   .refform label{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.9rem;color:var(--prune);margin-bottom:8px}
-  .refform input{width:100%;font-size:1rem;font-family:"Open Sans",Arial,sans-serif;padding:16px 18px;border:2px solid #BFE3CC;border-radius:12px;background:#fff;color:#111;outline:none;transition:border-color .15s,box-shadow .15s}
-  .refform input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(31,163,74,.18)}
-  .refform input.bad{border-color:var(--red);box-shadow:0 0 0 4px rgba(215,25,31,.12)}
+  .refform input{width:100%;font-size:1rem;font-family:"Open Sans",Arial,sans-serif;padding:16px 18px;border:2px solid #D6E1A6;border-radius:12px;background:#fff;color:#0B2A16;outline:none;transition:border-color .15s,box-shadow .15s}
+  .refform input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(98,136,28,.18)}
+  .refform input.bad{border-color:var(--red);box-shadow:0 0 0 4px rgba(192,57,43,.12)}
   .refform .err{color:var(--red);font-size:.85rem;font-weight:600;min-height:1.2em;margin-top:6px}
   .refform .btn{width:100%;margin-top:12px;cursor:pointer;font:inherit;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.1em;appearance:none;-webkit-appearance:none}
   .refform .after{text-align:center;font-size:.85rem;color:var(--muted);margin:12px 0 0}
@@ -234,18 +247,18 @@
   .ans{padding:0 20px 20px;font-size:1rem}
 
   /* ---------- urgency ---------- */
-  .urgent{background:linear-gradient(180deg,#111111,#0B1F14);border-top:6px solid var(--green);padding:56px 0;text-align:center;color:#fff}
+  .urgent{background:linear-gradient(180deg,#0B2A16,#072E14);border-top:6px solid var(--green);padding:56px 0;text-align:center;color:#fff}
   .urgent h2{font-size:1.7rem;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:.01em}
-  .urgent p{font-weight:600;max-width:600px;margin:0 auto .8em;color:#E3F1E8}
-  .urgent strong{color:#7BE0A3}
+  .urgent p{font-weight:600;max-width:600px;margin:0 auto .8em;color:#E6EFD0}
+  .urgent strong{color:#C2D96A}
 
   /* ---------- countdown before price ---------- */
   .cdsec{background:#fff;padding:44px 0 6px;text-align:center}
   .cdsec .lbl{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:var(--prune)}
   .cd{display:flex;justify-content:center;gap:12px;margin:16px 0 0}
-  .cd div{background:linear-gradient(180deg,#111,#1E2A22);color:#fff;border-radius:12px;min-width:82px;padding:14px 6px;border:1px solid #2c3b31;box-shadow:0 8px 18px rgba(0,0,0,.2)}
+  .cd div{background:linear-gradient(180deg,#0B2A16,#123D1E);color:#fff;border-radius:12px;min-width:82px;padding:14px 6px;border:1px solid #1F5A2E;box-shadow:0 8px 18px rgba(0,0,0,.2)}
   .cd b{display:block;font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:2.2rem;line-height:1.1;color:#fff}
-  .cd span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#7BE0A3}
+  .cd span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#C2D96A}
 
   /* ---------- emo + close ---------- */
   .emo{background:#fff;text-align:left}
@@ -255,10 +268,168 @@
   .emo em{color:var(--prune2);font-weight:700;font-style:normal}
   .sign{margin-top:36px;text-align:center;font-size:1.1rem}
   .sign b{font-family:Montserrat,Arial,sans-serif;font-size:1.3rem;color:var(--prune)}
-  .ps{max-width:640px;margin:36px auto 0;background:#FFFBE0;border:3px solid #F5C400;border-radius:12px;padding:20px 24px;font-size:1rem}
+  .ps{max-width:640px;margin:36px auto 0;background:#FBF3EA;border:3px solid #62881C;border-radius:12px;padding:20px 24px;font-size:1rem}
   .ps b{color:var(--red);font-family:Montserrat,Arial,sans-serif}
 
-  footer{background:#0B1F14;color:#b9d3c3;text-align:center;padding:30px 0 40px;font-size:.82rem}
+  footer{background:#072E14;color:#DDE8C3;text-align:center;padding:30px 0 40px;font-size:.82rem}
+
+  /* ================= DESIGN PRO & CLEAN (surcouche) ================= */
+  :root{--prune-d:#073515;--accent:#62881C;--soft:#EEF3D5;--line2:#E8DCC8;--shadow:0 1px 2px rgba(7,53,21,.05),0 14px 34px -16px rgba(7,53,21,.22)}
+  body{font-size:18px;line-height:1.72;color:#1B2B1F}
+  h1,h2,h3{color:var(--prune-d)}
+  section{padding:84px 0}
+  .wrap{max-width:720px}
+  .wide{max-width:980px}
+
+  .top{background:var(--prune-d);font-weight:600;font-size:.74rem;letter-spacing:.12em;padding:11px 14px}
+  .top b{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22);font-weight:700;border-radius:6px;font-size:.92rem}
+
+  .hero{padding:64px 0 72px;background-image:radial-gradient(ellipse at 50% 0,#FBEFE3,transparent 65%)}
+  .kicker{background:#fff;color:var(--prune2);border:1px solid var(--line2);font-weight:700;font-size:.72rem;letter-spacing:.12em;padding:9px 20px;margin-bottom:30px;box-shadow:0 1px 2px rgba(7,53,21,.05)}
+  .kicker::before,.kicker::after{content:none}
+  .hero h1{font-size:2.65rem;font-weight:800;letter-spacing:-.025em;line-height:1.14;color:var(--prune-d)}
+  .hero h1 em{color:var(--accent)}
+  .hero .sub{font-size:1.2rem;line-height:1.65;color:var(--muted);margin-top:22px}
+  .frame{border:1px solid var(--line2);border-radius:20px;box-shadow:0 30px 60px -28px rgba(7,53,21,.35)}
+  .frame .cap{background:#fff;color:var(--muted);font-weight:600;font-size:.88rem;text-align:center;border-top:1px solid var(--line2);padding:12px 14px}
+
+  mark{background:linear-gradient(transparent 58%,#DDE9A8 58%);padding:0 .1em}
+  .red{color:var(--accent)}
+  .letter p,.mail p{font-size:1.1rem;line-height:1.78;color:#1B2B1F}
+  .letter .pull{border-left:4px solid var(--accent);background:var(--blush);border-radius:0 14px 14px 0}
+  .letter .blame{border:0;border-left:4px solid var(--accent);background:var(--blush);border-radius:0 14px 14px 0;text-align:left}
+  .letter .blame b{color:var(--prune-d)}
+  h2.big{font-size:2rem;font-weight:800;letter-spacing:-.02em;color:var(--prune-d)}
+
+  .btn{background:var(--prune);border:0;color:#fff;font-weight:700;font-size:.98rem;letter-spacing:.07em;border-radius:14px;padding:22px 76px 22px 34px;box-shadow:0 14px 30px -10px rgba(7,53,21,.55)}
+  .btn::before{display:none}
+  .btn::after{width:36px;height:36px;right:18px;background:rgba(255,255,255,.14);box-shadow:none;font-size:1rem}
+  .btn:hover{background:#0F5A28;transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(7,53,21,.6)}
+  .btn small{color:#EADFCB}
+  .stick{background:rgba(255,255,255,.96);border-top:1px solid var(--line2);box-shadow:0 -10px 30px rgba(7,53,21,.12)}
+  .stick a{background:var(--prune);border:0;color:#fff;font-weight:700;letter-spacing:.07em;border-radius:12px}
+  .stick a::after{background:rgba(255,255,255,.16)}
+
+  .dg{border-top:1px solid var(--line2)}
+  .dg .tag{background:var(--soft);color:var(--prune2);font-weight:700;letter-spacing:.1em}
+  .dg h3,.todo h3{font-weight:800;color:var(--prune-d)}
+
+  .proof{border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow)}
+  .proof h3{font-weight:800;color:var(--prune-d)}
+  .ba > div{border-radius:12px}
+  .ba .b{border:1px solid #E2DCE0}
+  .ba .a{border:1px solid #D6E1A6}
+  .stars{color:var(--accent)}
+
+  .chips li{border:1px solid var(--line2);background:#fff}
+  .yn .yes{border:1px solid #D6E1A6;border-top:4px solid var(--accent)}
+  .yn .no{border:1px solid #F1CDD3;border-top:4px solid var(--red)}
+  .yn h3{font-weight:800;font-size:1.05rem}
+  .yes h3{color:var(--accent)}
+
+  .getgrid::before{background:var(--line2);width:2px;opacity:1;left:25px}
+  .gcard .ic{background:var(--prune);color:#fff;font-weight:800;box-shadow:none;border-color:var(--blush)}
+  .gcard .gb{border:1px solid var(--line2);box-shadow:var(--shadow);border-radius:18px}
+  .gcard h3{font-weight:800;font-size:1.14rem;color:var(--prune-d)}
+  .gcard .dl b{background:var(--soft);color:var(--prune2);font-weight:700}
+  .gcard .val{background:#fff;color:var(--muted);border-top:1px solid var(--line2);font-weight:600}
+  .gcard .val b{color:var(--prune-d);font-weight:800}
+  .gcard .bn{background:var(--blush);border-top:1px solid var(--line2);font-weight:600}
+  .gcard.bonus .ic{background:var(--accent);color:#fff}
+  .gcard.bonus .gb{border:1.5px solid var(--accent)}
+  .tot{border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow)}
+  .tot .all{background:var(--blush);color:var(--prune-d);font-weight:800}
+  .tot .pay-now{background:var(--prune)}
+  .tot .pay-now b{color:#fff}
+  .author{border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow)}
+
+  .order{border:1px solid var(--line2);border-top:5px solid var(--prune);border-radius:20px;box-shadow:0 30px 70px -30px rgba(7,53,21,.4)}
+  .ribbon{background:var(--prune);color:#fff;font-weight:700;letter-spacing:.12em;box-shadow:0 8px 18px -8px rgba(7,53,21,.5)}
+  .order .now{font-weight:800;letter-spacing:-.02em}
+  .order .now span{background:none}
+  .paybox{border:1px solid var(--line2);background:var(--blush);border-radius:14px}
+  .paybox .row span{background:var(--prune);color:#fff}
+  .paybox .num{background:var(--soft);color:var(--prune);font-weight:700}
+  .refform input{border:1.5px solid var(--line2);border-radius:12px}
+  details{border:1px solid var(--line2)}
+
+  .urgent{background:var(--prune-d);border-top:0;padding:64px 0}
+  .urgent h2{font-size:1.5rem;font-weight:800;letter-spacing:.04em;color:#fff}
+  .urgent p{color:#EADFCB}
+  .cdsec .lbl{font-weight:700;letter-spacing:.14em;font-size:.78rem;color:var(--muted)}
+  .cd div{background:var(--prune);border:0;box-shadow:0 12px 24px -12px rgba(7,53,21,.5);border-radius:14px}
+  .cd b{font-weight:800}
+  .cd span{color:#D6E1A6}
+  .emo p{font-size:1.15rem}
+  .ps{background:var(--blush);border:1px solid var(--line2);border-left:4px solid var(--accent);border-radius:0 14px 14px 0}
+  .ps b{color:var(--accent)}
+  footer{background:var(--prune-d)}
+  .copybtn{border:1px solid var(--prune);color:var(--prune);font-weight:700;border-radius:6px}
+
+  /* alignement lettre -> méthode (même colonne, pas de grand vide) */
+  .letter.pas .wrap{max-width:604px}
+  .letter.pas{padding-bottom:0}
+  #methode{padding-top:6px}
+
+
+  /* ---------- palette verte (réf. vitalbite) ---------- */
+  .btn::after{background:var(--yellow);color:var(--prune-d)}
+  .stick a::after{background:var(--yellow);color:var(--prune-d)}
+  .btn small{color:#DDE8C3}
+  .cyc{margin:30px auto 34px;max-width:400px;text-align:center}
+  .cyc svg{width:100%;height:auto;display:block}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:14px;font-size:.9rem;font-weight:600;color:var(--muted)}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+  .rcv{background:var(--blush);padding:72px 0 64px}
+  .rcv .devices{max-width:820px;margin:34px auto 0}
+  .rcv .devices svg{width:100%;height:auto;display:block;overflow:visible}
+  .rcv .chips{margin-top:26px}
+
+  .hero-img{margin:6px auto 30px;max-width:520px}
+  .hero-img svg{width:100%;height:auto;display:block}
+
+  /* ---------- mini hero vert (chrono-nutrition) ---------- */
+  .objs{background:radial-gradient(ellipse at 50% 0,#14602C,transparent 70%),linear-gradient(180deg,#073515,#0B4A20);padding:84px 0 88px;text-align:center}
+  .objs .mail{max-width:620px}
+  .objs .mail p{color:#E4EDCB;font-size:1.15rem}
+  .objs .mail p strong{color:#fff}
+  .objs h2.big{text-align:center!important;color:#fff;font-size:3rem;letter-spacing:-.025em;margin:6px 0 4px}
+  .objs h2.big .red{color:var(--yellow)}
+  .objs mark{background:linear-gradient(transparent 62%,rgba(166,193,58,.5) 62%);color:#fff}
+  .objs .hero-img{max-width:440px;margin:18px auto 34px}
+
+  /* ---------- mini hero vert : mise en page 2 colonnes ---------- */
+  .objs{text-align:left;padding:80px 0}
+  .objs .wrap{max-width:1040px}
+  .mh{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .mh-eyebrow{position:relative;margin:0 0 22px;padding-left:18px;font-size:1rem;line-height:1.55;font-weight:600;color:#C9DB8B}
+  .mh-eyebrow::before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:4px;border-radius:2px;background:var(--yellow)}
+  .mh-eyebrow strong{color:#fff;font-weight:700}
+  .objs h2.mh-title{text-align:left!important;font-size:3.4rem;line-height:1.02;letter-spacing:-.03em;margin:0 0 22px;color:#fff}
+  .mh-lead{margin:0 0 26px;font-size:1.28rem;line-height:1.65;color:#E4EDCB;max-width:30em}
+  .mh-lead strong{color:#fff}
+  .mh-proof{display:inline-flex;align-items:center;gap:12px;margin:0;padding:10px 18px 10px 12px;border:1px solid rgba(255,255,255,.22);border-radius:40px;background:rgba(255,255,255,.07);font-size:.98rem;font-weight:600;color:#fff;line-height:1.4}
+  .mh-proof i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--yellow);color:var(--prune-d);font-style:normal;font-weight:900;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+  .objs .hero-img{max-width:none;margin:0}
+  @media (max-width:820px){
+    .mh{grid-template-columns:1fr;gap:34px}
+    .objs h2.mh-title{font-size:2.6rem}
+    .objs .hero-img{max-width:340px;margin:0 auto}
+  }
+
+  /* ---------- CTA : améliorations ---------- */
+  .cta-note{text-align:center;font-size:.9rem;font-weight:600;color:var(--muted);margin:16px auto 0;max-width:560px;line-height:1.5}
+  .cta-dl{text-align:center;margin:30px 0 0;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.04em;color:var(--red)}
+  .cta-dl + .btn{margin-top:14px}
+  .btn2{display:block;max-width:560px;margin:18px auto 0;padding:15px 22px;border:1.5px solid var(--prune);border-radius:14px;background:#fff;color:var(--prune);font-weight:700;font-size:.95rem;line-height:1.4;text-align:center;text-decoration:none;transition:background .2s}
+  .btn2:hover{background:var(--blush)}
+  .stick a{flex-direction:row}
+  .stick .sk{display:block;text-align:center;line-height:1.25}
+  .stick .sk small{display:block;margin-top:2px;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:none;opacity:.85}
+  .payfact{display:grid;grid-template-columns:1fr 1.5fr;gap:10px;margin:0 0 16px}
+  .payfact > div{background:#fff;border:1px solid var(--line2);border-radius:12px;padding:10px 12px;text-align:center}
+  .payfact small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+  .payfact b{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.1rem;color:var(--prune-d);white-space:nowrap}
 
   /* ---------- mobile ---------- */
   @media (max-width:720px){
@@ -272,6 +443,8 @@
     .hero h1{font-size:1.95rem}
     .hero .sub{font-size:1.1rem}
     h2.big{font-size:1.6rem}
+    .objs h2.big{font-size:2.2rem}
+    .objs{padding:60px 0 64px}
     .vs,.ba,.yn,.mini{grid-template-columns:1fr}
     .getgrid::before{left:19px}
     .gcard{gap:12px}
@@ -279,6 +452,7 @@
     .gcard h3{font-size:1.08rem;padding:16px 16px 6px}
     .gcard .dl{padding:0 16px 12px}
     .gcard .bn,.gcard .im{padding:12px 16px;gap:10px}
+    .gcard .val,.tot div{padding:12px 16px}
     .btn{font-size:.95rem;padding:18px 66px 18px 20px}
     .order .now{font-size:3rem}
     .ribbon{font-size:.75rem;padding:9px 16px}
@@ -292,65 +466,37 @@
 <!-- ===================== HERO ===================== -->
 <header class="hero">
   <div class="wrap wide">
-    <div class="kicker">Ho an'ireo manena tena kanefa miverina mitombo indray</div>
-    <h1>Ahoana ny <em>tsy hiverenan'ny lanja intsony</em> rehefa avy manena vatana ?</h1>
-    <p class="sub"><b>Ny secret hanànana poids stable</b> tsy misy sport sy régime</p>
+    <div class="kicker">Ho an'ireo vehivavy te hanena lanja amin'ny methode hafa</div>
+    <h1>Ahoana ny manena vatana ary <em>tsy hampiverina ny lanja intsony</em>, tsy misy régime sy sport</h1>
+    <p class="sub">Leo ianao, kivy, ary tsy te hieritreritra intsony.<br>Mifady hanina ianao, nefa vao maika mitombo ny lanja.</p>
 
-    <div class="frame" id="heroFrame">
-      <img src="images/femme_grosse.jpg" alt="Vehivavy tsy faly mijery ny kibony" onerror="this.parentNode.classList.add('missing')">
-      <div class="slot">Apetraho eto ny sary: <b>images/femme_grosse.jpg</b><br>(vehivavy tsy faly mijery ny kibony / ny lanjany)</div>
-      <div class="cap">▲ Efa niaina an'izany ve ianao ?</div>
-    </div>
 
     <!-- CTA hero -->
-    <a class="btn" href="#methode">Hampiatra ny méthode</a>
+    <a class="btn" href="#methode">Hanomboka hanena lanja aho</a>
+    <p class="cta-note">⚡ Accès avy hatrany · 4 videos + Support + Bonus WhatsApp · Indray mividy fotsiny</p>
   </div>
 </header>
 
-<!-- ===================== POUR QUI ===================== -->
-<section class="who">
-  <div class="wrap wide">
-    <h2 class="big">Ho anao ve ity ?</h2>
-    <div class="yn" style="margin-top:34px">
-      <div class="box yes">
-        <h3>✔ Ho anao izao raha…</h3>
-        <ul>
-          <li>Vehivavy manodidina ny 30 taona sy 50 taona ianao ka manana vatana ngeza</li>
-          <li>Efa nanena vatana ianao tamin'ny régime, jeûne na cardio, fa niverina ihany Ilay lanja</li>
-          <li>Léo ianao amin'ny fanaovana régime foana, ary kivy rehefa mandeha ny 3-4 semaine</li>
-          <li>Efa nahavita -5kg hatramin'ny -10kg ianao, kanefa niverina Ilay kibo</li>
-          <li>Lazain'olona foana fa bevohoka ianao kanefa tsy bevohoka akory</li>
-          <li>Te hihazona lanja stable ianao tsy misy fifehezan-tena mafy sy cardio isan'andro</li>
-        </ul>
-      </div>
-      <div class="box no">
-        <h3>✖ Tsy ho anao raha…</h3>
-        <ul>
-          <li>Mitady régime vaovao hanenana haingana ianao</li>
-          <li>Mbola mazoto manao régime strict ary tsy mbola leo</li>
-          <li>Tsy vonona hanova ny fomba fisakafoana</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== LETTER ===================== -->
-<section class="letter">
+<!-- ===================== PROBLEME / AGITATION ===================== -->
+<section class="letter pas">
   <div class="wrap">
-    <p>Rehefa hanena vatana dia lazaina anao foana ireto.</p>
-    <p>Ary mino aho fa anisan'ilay olona efa nanao ireto ianao.<span class="sp"></span>Raha efa nanena vatana kanefa tsy nahita vokatra loatra.</p>
-    <p>Fa mihena aloha Ilay vatanao, indrindra Ilay kibonao.<span class="sp"></span>AVY eo anefa dia <mark>mistagne amin'izay</mark>,<br>no sady miverina mihitsy vao ajanonao Ilay liste sakafo azonao tany anatin'ireny coaching ireny.</p>
-    <p>Aty am-boalohany mantsy mihena tsara Ilay vatanao.<span class="sp"></span>Ary tena manakaiky an'ilay objectif anao mihitsy ianao hoe <mark>-7kg à -10kg</mark>.</p>
-    <p>AVY eo anefa mandeha ny 4 semaine dia Léo ianao,<br>na koa tsy arakao intsony Ilay régime sy fifadian-kanina asaina hataonao.<span class="sp"></span>Dia <strong>miverina Ilay lanjanao</strong>.</p>
-    <p>Mandaitra tsara Ary mety tsara Ilay régime asain'ilay coach hataonao.</p>
-    <div class="pull">Fa eo Ilay olana hoe: raha tratra Ilay tanjona, dia <span class="red">ahoana ny tohiny ?</span></div>
+    <p>Efa miezaka tena mifady sakafo ianao.<br>Tsy mihinana goûter intsony.<br>Ahena ny sakafo…<br>fa tsy mihena, matavy foana.</p>
+    <p>Miafy tsy misakafo, noana,<br>anefa tsy mety mihena.<br>Vao maika lasa miha ngeza noho ny teo aloha ndray.</p>
+    <p>Ary rehefa misakafo,<br>mahalany betsaka vao voky.<br>Lasa tsy mety voky, fa vao maika lasa noana foana.<br>Otran manao <mark>rattrapage</mark> ny vatana.</p>
+    <p>Arakarakin'ny hifadina hanina<br>no maha te hinana be.</p>
+    <p>Dia tsy mety mihena,<br><strong>na inona hatao na inona</strong>.</p>
 
-    <p>Tsy hanameloka anao aho.<span class="sp"></span><strong>Tsy fahadisoanao velively</strong> raha toa ka tsy voatazonao mihitsy Ilay lanjanao io.</p>
+    <p style="margin-top:2em">Leo ianao.<br>Kivy.<br>Tsy te hieritreritra intsony.</p>
+    <p>Rehefa mijery fitaratra ianao,<br>dia mahatsapa fa mihangezabe ny vatanao.</p>
 
-    <p>Fa ny méthode omena anao no <mark>misy faille tsy voajery</mark>.</p>
-    <p>Raha hay Ilay manena, dia aiza Ilay mihazona ?<span class="sp"></span>Vita ihany Ilay manala Ilay tavy,<br>fa ahoana no hatao hahatonga azy tsy hiverina eo ?</p>
-    <p>Noho io tsy fahampiana eo amin'ilay fomba fanenam-batana malaza bé io no antony nikarohinay ka nahavitana ity <strong>Nutrition Stabilisateur</strong> ity.</p>
+    <p style="margin-top:2em">Ary ny tena mampatahotra dia izao:<br>raha mitohy toy izao,<br>ho tonga ny taona manaraka,<br>ary mbola eo ihany ianao.</p>
+    <p>Mbola manao régime. Mbola kivy.<br>Tsy mahatoky tena intsony.<br>Ary mety ho matavy kokoa aza noho izao.</p>
+
+    <p style="margin-top:2em">Fa henoy aloha.</p>
+    <p><strong>Tsy fahadisoanao.</strong><br>Tsy kamo ianao. Tsy malemy.<br>Tsy fifehezan-tena no tsy ampy anao.<br>Ny fomba nampianarina anao no tsy feno.</p>
+
+    <p style="margin-top:2em">Ary misy lalana hafa.<br>Tsy mila mifady hanina ianao,<br>ary tsy mila sport mandreraka.</p>
+    <p>Hazavaiko anao izany eto ambany.</p>
   </div>
 </section>
 
@@ -358,153 +504,39 @@
 <section id="methode">
   <div class="wrap">
     <div class="mail">
-      <h2 class="big" style="text-align:left">Tsy fahaizana manena no tsy ampy anao. <span class="red">Fahaizana mitazona.</span></h2>
-      <p>Nampianarina anao ny <strong>fomba hanena</strong>.<span class="sp"></span>Tsy nampianarina anao ny <strong>fomba hitazona</strong>.</p>
-      <p>Izay no <mark>fiovana</mark>:</p>
+      <p>Manana <strong>cycle naturel</strong> ny vatana.<br>Misy fotoana mandoro tsara ny tavy izy,<br>ary misy fotoana mitahiry.</p>
 
-      <div class="dg">
-        <span class="tag">Taloha</span>
-        <p>Efa nanao régime sy cardio isan'andro ianao.<span class="sp"></span>Nihena tsara ny vatanao, ary vitanao ny 1 volana na 2 volana.</p>
-        <p>Mahatsiaro ho voageja ianao,<br>tsy mahatsapa liberté intsony,<br>ary mitondra frustration aminao ny vatanao.<span class="sp"></span>Vizana ary kivy ianao, kanefa mbola miezaka ihany.</p>
-        <p>Rehefa mandeha ny fotoana dia Léo ianao,<br>mi-lache, ary miverina ilay tavy sy ilay kibo.<span class="sp"></span>Indraindray aza ambony kokoa noho ny taloha.</p>
-        <p>Normal izany, satria mifantoka amin'ny sakafo sy ny fanenana azy ny méthode,<br>ka forcenao ny vatana.<span class="sp"></span>Rehefa mihena ny sakafo dia <mark>mitahiry</mark> ny vatana (mode stockage).<span class="sp"></span>Tsy natao hiaina toy izany izy.</p>
-      </div>
+      <figure class="cyc">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Cycle naturel ny vatana: fotoana mandoro tavy sy fotoana mitahiry">
+          <circle cx="150" cy="150" r="140" fill="#FDF1E6" stroke="#EADFCB" stroke-width="1.5"/>
+          <path d="M156.5,26.2 A124,124 0 0 1 273.8,143.5 L223.9,146.1 A74,74 0 0 0 153.9,76.1 Z" fill="#A6C13A"/><path d="M273.8,156.5 A124,124 0 0 1 156.5,273.8 L153.9,223.9 A74,74 0 0 0 223.9,153.9 Z" fill="#E8D9BD"/><path d="M143.5,273.8 A124,124 0 0 1 26.2,156.5 L76.1,153.9 A74,74 0 0 0 146.1,223.9 Z" fill="#A6C13A"/><path d="M26.2,143.5 A124,124 0 0 1 143.5,26.2 L146.1,76.1 A74,74 0 0 0 76.1,146.1 Z" fill="#E8D9BD"/>
+          <text x="220.0" y="89.0" font-size="26" text-anchor="middle">🔥</text><text x="220.0" y="229.0" font-size="26" text-anchor="middle">📦</text><text x="80.0" y="229.0" font-size="26" text-anchor="middle">🔥</text><text x="80.0" y="89.0" font-size="26" text-anchor="middle">📦</text>
+          <circle cx="150" cy="150" r="62" fill="#fff"/>
+          <text x="150" y="132" font-size="11" font-family="Montserrat,Arial,sans-serif" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#62881C">CYCLE</text>
+          <text x="150" y="156" font-size="19" font-family="Montserrat,Arial,sans-serif" font-weight="800" text-anchor="middle" fill="#073515">Chrono-</text>
+          <text x="150" y="178" font-size="19" font-family="Montserrat,Arial,sans-serif" font-weight="800" text-anchor="middle" fill="#073515">nutrition</text>
+        </svg>
+        <div class="legend"><span><i style="background:#A6C13A"></i>Fotoana mandoro tavy</span><span><i style="background:#E8D9BD"></i>Fotoana mitahiry tavy</span></div>
+      </figure>
+      <p>Rehefa tsy fantatrao io cycle io,<br>any amin'ny fotoana mitahiry tavy no ampidirinao<br>ny ankamaroan'ny sakafo (goûter, sns).</p>
+      <p>Ka na manao régime rehetra eto an-tany aza ianao,<br>na tena mazoto sy discipliné aza,<br>dia <strong>mandà ny hihena</strong> ny vatana.</p>
+      <p>Satria ampiasainao izy amin'ny <mark>fotoana diso</mark>.</p>
 
-      <div class="dg">
-        <span class="tag">Izao</span>
-        <p>Tsy ny sakafo intsony no ifantohana, fa ny <strong>vatana</strong>.<span class="sp"></span>Ny fotoana sy ny filaharan'ny sakafo no amboarina,<br>mba hiditra amin'ny <strong>mode brûlage</strong> ny vatana.</p>
-        <p>Mandaitra izany satria otran'ny mangataka zavatra amin'olona: raha forcenao izy dia tsy manome,<br>fa raha resahina milamina dia manome.<span class="sp"></span>Izay koa ny vatanao.</p>
-        <p class="ben">✔ Ny vokatra: <mark>tsy mila fifehezan-tena isan'andro</mark> ianao,<br><mark>tsy mila cardio mandreraka</mark>,<br>ary <mark>tsy mila manomboka indray</mark>.</p>
-      </div>
+      <p style="margin-top:2em">Ary misy zavatra hafa koa: ny <strong>filaharan'ny sakafo</strong>.</p>
+      <p>Rehefa diso ny fomba fisakafoanao,<br>dia mora noana ianao.<br>Izay no mahatonga anao te hi-grignote isaky ny mihetsika,<br>mitady izay hahavoky.</p>
+      <p>Ary mihamitombo ny olana:<br>ny reflexe dia mitady izay hahavoky amin'ny fomba diso.<br>Pâtes, viennoiserie, vary no tadiavina,<br>sakafo mora mamokatra tavy.</p>
+      <p>Ka normale ihany ny mitombo ny lanja,<br>satria ireny no hohanina.</p>
+      <p><strong>Nanao ny zavatra rehetra ianao,<br>fa tamin'ny <mark>fotoana diso</mark>, tamin'ny <mark>filaharana diso</mark>.</strong></p>
 
-    </div>
+      <p style="margin-top:2em">Isaky ny miverina ny lanja,<br>mihamafy ny hevitrao hoe ianao no diso.<br>Mihena ny fahatokiana tena.<br>Mihamaivana ny fanantenana.</p>
+      <p>Dia kivy, ary manomboka indray ihany.</p>
+      <p>Fa tsy fahalemena izany.<br>Ny vatanao no tsy hita fotoana tsara.</p>
 
-    <div class="mail">
-      <p>Tsy régime na sakafo no ao.<span class="sp"></span><strong>Fomba fisakafoana</strong> mihitsy Ilay izy,<br>natao hanena vatana <mark>ary koa hitazomana ny lanja</mark><br>(hanena sy hitazona).</p>
-      <h2 class="big" style="text-align:left;margin-top:8px">Ireo <span class="red">dingana 4</span> hidiranao amin'ny mode brûlage</h2>
-    </div>
+      <p style="margin-top:2em">Ka ny fomba vaovao dia mifantoka amin'ny <strong>cycle naturel</strong> ny vatana.<br>Ny <strong>fotoana</strong>, ny <strong>filaharan'ny sakafo</strong>,<br>ary ny sakafo mahavoky marina no araka ny cycle.</p>
+      <p>Rehefa arahina io,<br>dia miditra amin'ny <strong>mode brûlage</strong> ny vatana.<br>Mandoro ny tavy izy, indrindra ny kibo,<br>tsy misy régime sy sport mandreraka.</p>
 
-    <div class="mail">
-      <div class="dg">
-        <span class="tag">Dingana 1</span>
-        <h3>Fantaro Ilay vatanao</h3>
-        <p>Fantaro aiza ho aiza ny vatana no mandoro tavy,<br>ary aiza izy no mitahiry (mode brûlage / mode stockage).<span class="sp"></span>Io no hampiasaintsika voalohany: ny <strong>rythme circadien</strong> sy ny <strong>fenêtre alimentaire</strong>.</p>
-        <p>Satria mandoro sy mitahiry araka ny <strong>cycle naturel 24 h</strong> ny vatana,<br>ary io no fototra rehetra.</p>
-        <p class="ben">✔ Mba hahatonga anao <mark>hatory tsara</mark>,<br><mark>hifoha matanjaka</mark>, ary hamela ny vatanao hiditra amin'ny <mark>mode brûlage</mark> fa tsy hitahiry foana.</p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 2</span>
-        <h3>Amboary ny filaharan'ny sakafo</h3>
-        <p>Inona no sakafo tokony hohaninao <strong>voalohany</strong> ?<span class="sp"></span>Tsy mifady ianao, ary mbola mihinana glucide ihany. <strong>Ny ordre no amboarina.</strong></p>
-        <p>Satria tsy ny sakafo no olana, fa ny fotoana sy ny filaharan'ny fihinanana azy.</p>
-        <p class="ben">✔ Mba hahatonga anao mihinana nefa <mark>tsy mizihatra sy tsy misy rivotra intsony ny kibonao</mark> rehefa avy misakafo,<br>ary <mark>tsy manao régime</mark> hitazonana ny lanja.</p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 3</span>
-        <h3>Mihinàna ny sakafo stabilisateur</h3>
-        <p>Ny lisitry ny sakafo stabilisateur de poids rehetra.<span class="sp"></span>Rehefa hiantsena ianao, iny no hoentina manao achat.</p>
-        <p>Satria rehefa voky tsara ianao, dia tsy noana ny vatanao, ary mahay mandoro tavy izy.</p>
-        <p class="ben">✔ Mba hahatonga anao <mark>voky tsara</mark> rehefa mihinana,<br>ka <mark>tsy mitady grignotage intsony</mark>,<br>ary mora kokoa ny mitazona ny lanja.</p>
-      </div>
-
-      <div class="dg">
-        <span class="tag">Dingana 4</span>
-        <h3>Ampiharo ny formule secret an'ny assiette, sady mampihena no mitazona lanja</h3>
-        <p>Ho hainao ny formule secret hanamboarana ny lovia mitazona lanja.</p>
-        <p>Satria lovia <strong>feno</strong> no mameno ny zavatra rehetra ilain'ny vatana,<br>ka tsy misy hanoanana bé tampoka intsony.</p>
-        <p class="ben">✔ Mba hahatonga ny <mark>tour de taille hihena</mark> sy hahafahanao <mark>mitazona ilay lanja</mark>,<br>nefa tsy mila coach isan'andro.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ===================== NUTRITION STABILISATEUR + OBJECTIONS ===================== -->
-<section class="objs">
-  <div class="wrap">
-    <div class="mail">
-      <p>Ka izay indrindra no ao ato anatin'ny <strong>« programme nutrition stabilisateur »</strong>,<br>mba hanampy anao hanena sy hitazona ny lanja mety aminao.</p>
-      <p>Programme efa vita andrana ity ary <mark>voaporofo tamin'ny vehivavy maro teto Madagasikara</mark>,<br>tsy nisy régime sy sport natao hanefa…</p>
-
-      <h2 class="big" style="text-align:left">Nutrition <span class="red">Stabilisateur</span></h2>
-      <p>Fomba fisakafoana mampiditra ny vatana amin'ny <strong>mode brûlage</strong>,<br>natao <mark>hanena lanja sady hitazona azy</mark>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
-<section class="get">
-  <div class="wrap wide">
-    <h2 class="big">Ny ho azonao</h2>
-    <p style="text-align:center;font-weight:700;margin:0 0 18px">4 videos + Support pratique étape par étape</p>
-    <div class="getgrid">
-      <div class="gcard"><div class="ic">1</div><div class="gb"><h3>Fantaro Ilay vatanao</h3><p class="dl"><b>Video</b><span>Heure exactes fihinanana sakafo</span></p><p class="bn"><i>✔</i><span>Hatory tsara ianao, ary hifoha matanjaka.</span></p><p class="im"><i>➜</i><span>Miditra amin'ny mode brûlage ny vatanao, ka mihena ny lanja sy ny kibo.</span></p></div></div>
-      <div class="gcard"><div class="ic">2</div><div class="gb"><h3>Amboary ny filaharan'ny sakafo</h3><p class="dl"><b>Video</b><span>Ordre fihinanana sakafo</span></p><p class="bn"><i>✔</i><span>Tsy mizihatra sy tsy misy rivotra intsony ny kibonao rehefa avy misakafo.</span></p><p class="im"><i>➜</i><span>Hita aloha ny fihenan'ny tour de taille.</span></p></div></div>
-      <div class="gcard"><div class="ic">3</div><div class="gb"><h3>Mihinàna ny sakafo stabilisateur</h3><p class="dl"><b>Video + Support</b><span>Liste ny aliment stabilisateur</span></p><p class="bn"><i>✔</i><span>Voky tsara ianao, ka tsy mitady grignotage intsony.</span></p><p class="im"><i>➜</i><span>Mihena ianao nefa tsy mifady hanina, ary mora kokoa ny mitazona ny lanja.</span></p></div></div>
-      <div class="gcard"><div class="ic">4</div><div class="gb"><h3>Ampiharo ny formule secret an'ny assiette</h3><p class="dl"><b>Video</b><span>Formule assiette</span></p><p class="bn"><i>✔</i><span>Tsy misy hanoanana bé tampoka intsony.</span></p><p class="im"><i>➜</i><span>Mihena sady mitazona lanja ianao, tsy mila coach isan'andro.</span></p></div></div>
-      <div class="gcard"><div class="ic">5</div><div class="gb"><h3>7 recettes types</h3><p class="dl"><b>Support</b><span>Recettes tsotra azo ampiharina avy hatrany.</span></p><p class="bn"><i>✔</i><span>Tsy mila mieritreritra intsony ianao.</span></p><p class="im"><i>➜</i><span>Manaraka tsy tapaka ianao, ka tonga amin'ilay vatana irianao.</span></p></div></div>
-    </div>
-
-    <div class="mail" style="margin-top:34px">
-      <div class="dg todo">
-        <h3>⏱ Rahoviana no hitanao ny vokatra ?</h3>
-        <p>Ilay madame tao amin'ny sary etsy ambany<br>dia nahita <strong>-11 cm ao anatin'ny 2 herinandro</strong>,<br>ary izao miditra ny 3ème semaine.</p>
-        <p>Samy hafa ny vatana tsirairay,<br>fa io no fotoana hita tao amin'ireo vokatra.</p>
-        <p>Rehefa tafavoaka ny fanenana,<br>ireo dingana ihany no ampiasaina <strong>hitazomana</strong> ny lanja:<br>tsy mila manomboka indray.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== COMPTE A REBOURS ===================== -->
-<section class="cdsec">
-  <div class="wrap">
-    <div class="lbl">⏳ Hikatona ny fisoratana anarana afaka:</div>
-    <div class="cd">
-      <div><b id="cd-d">--</b><span>Andro</span></div>
-      <div><b id="cd-h">--</b><span>Ora</span></div>
-      <div><b id="cd-m">--</b><span>Minitra</span></div>
-      <div><b id="cd-s">--</b><span>Segonda</span></div>
-    </div>
-    <p class="urgline">Aorian'io daty io <strong>mikatona</strong> ny tolotra, ary <strong>ambony kokoa</strong> ny vidiny manaraka.</p>
-  </div>
-</section>
-
-<!-- ===================== PRIX ===================== -->
-<section class="pricing" id="prix">
-  <div class="wrap">
-    <div class="order">
-      <div class="ribbon">Prix de lancement</div>
-      <p class="old">Vidiny mahazatra: <s>97 000 Ar</s></p>
-      <div class="now"><span>55 000 Ar</span></div>
-      <p style="margin:0;font-weight:600">Indray mividy fotsiny. Anao mandrakizay Ilay fomba.</p>
-      <ul>
-        <li>Liste ny aliment stabilisateur <em>(video + Support)</em></li>
-        <li>Formule assiette stabilisateur <em>(video)</em></li>
-        <li>Heure exactes fihinanana sakafo <em>(video)</em></li>
-        <li>Ordre fihinanana sakafo <em>(video)</em></li>
-        <li>7 recettes types <em>(support)</em></li>
-      </ul>
-      <div class="paybox">
-        <div class="pt">💳 Ahoana ny fandoavana ?</div>
-        <div class="row"><span>1</span><div>Alefaso ny <b>Ar 55 000</b> amin’ny <b>MVola</b> any amin’ny <b class="num" id="mvnum">034 71 128 57</b> <button type="button" class="copybtn" id="copyBtn">Adikao</button></div></div>
-        <div class="row"><span>2</span><div>Soraty etsy ambany ny <b>référence</b></div></div>
-        <div class="row"><span>3</span><div>Tsindrio ity bokotra etsy ambany ity handefasana ny référence amin'ny <b>WhatsApp</b></div></div>
-      </div>
-
-      <!-- Formulaire référence -> WhatsApp -->
-      <form class="refform" id="refForm" novalidate>
-        <label for="ref">Référence an'ny transaction MVola</label>
-        <input id="ref" name="ref" type="text" inputmode="text" autocomplete="off" placeholder="Soraty eto ny référence" required>
-        <div class="err" id="refErr" role="alert"></div>
-        <button class="btn" type="submit">Andefa ny référence avy hatrany</button>
-        <p class="after">Azo idirana avy hatrany ny méthode aorian'ny fandraisana ny référence.</p>
-      </form>
-      <ul class="trust"><li>⚡ Accès avy hatrany</li><li>🎥 4 videos + Support</li><li>💬 Fanampiana amin'ny WhatsApp</li></ul>
-      <p class="askwa">Mbola misalasala ? <a id="askLink" href="#">Soraty amin'ny WhatsApp ny fanontanianao</a></p>
+      <p style="margin-top:2em">Rehefa azonao ireo,<br>dia hanomboka hihena ianao,<br>hanomboka <strong>ho tia ny vatanao</strong>,<br>ary <strong>hiverina hatoky tena kokoa</strong>,<br>satria ho tsapanao ny fiovana.</p>
+      <p>Ary tsy ho frustration ho anao intsony<br>ny mijery fitaratra.</p>
     </div>
   </div>
 </section>
@@ -513,8 +545,7 @@
 <section class="proofs" id="preuves">
   <div class="wrap">
     <div class="stars">★★★★★</div>
-    <h2 class="big">Ireto ny vokatra azon'ireo vehivavy</h2>
-
+    <h2 class="big">Rehefa narahina ny <span class="red">cycle naturel</span>, ireto no hita</h2>
     <div class="proof">
       <div class="shot" id="s1"><img src="images/proof%20pp%20(2).jpg" alt="Kibo nihena 11 cm" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof%20pp%20(2).jpg</div></div>
       <div class="body">
@@ -527,23 +558,20 @@
     </div>
 
     <div class="proof">
+      <div class="shot"><img src="images/stab_01.jpg" alt="65 kg → 64 kg ao anatin'ny 1 herinandro" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/stab_01.jpg</div></div>
+      <div class="body">
+        <h3>🏅 65 kg → 64 kg ao anatin'ny 1 herinandro</h3>
+        <p class="quote">« Za zay une semaine no nanomboka, mbola tsy tonga lafatra fa efa tsy 65 kg tsony androany fa efa miafficher 64, eo ny balance. »</p>
+      </div>
+    </div>
+
+    <div class="proof">
       <div class="shot" id="s2"><img src="images/proof_2%20copie.jpg" alt="-3 cm, ballonnement afaka" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_2%20copie.jpg</div></div>
       <div class="body">
         <h3>🏅 -3 cm, ballonnement sy kibo mizihatra afaka tanteraka</h3>
         <div class="ba">
           <div class="b"><b>😢 AVANT</b>Tsy mahita tory no sady misy rivotra ka manao ballonnement foana, ary mizihitra foana ilay kibony avy misakafo.</div>
           <div class="a"><b>😁 APRÈS</b>Afaka ilay rivotra (ballonnement) no sady nahazo forme tsara kokoa.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="proof">
-      <div class="shot"><img src="images/proof_3%20(1).jpg" alt="Nilamina ny torimaso" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_3%20(1).jpg</div></div>
-      <div class="body">
-        <h3>🏅 Taitra foana amin'ny 1 maraina → nilamina ny torimaso</h3>
-        <div class="ba">
-          <div class="b"><b>😢 AVANT</b>Taitra foana manomboka amin'ny 1 maraina, dia amin'ny 5 vao mahita tory. Reradreraka foana mandritra ny tontolo andro.</div>
-          <div class="a"><b>😁 APRÈS</b>Nanomboka nilamina ilay torimaso tapatapaka, ary matanjaka tsara vao mifoha ny maraina.</div>
         </div>
       </div>
     </div>
@@ -560,17 +588,201 @@
       </div>
     </div>
 
+    <div class="proof">
+      <div class="shot"><img src="images/proof_3%20(1).jpg" alt="Nilamina ny torimaso" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof_3%20(1).jpg</div></div>
+      <div class="body">
+        <h3>🏅 Taitra foana amin'ny 1 maraina → nilamina ny torimaso</h3>
+        <div class="ba">
+          <div class="b"><b>😢 AVANT</b>Taitra foana manomboka amin'ny 1 maraina, dia amin'ny 5 vao mahita tory. Reradreraka foana mandritra ny tontolo andro.</div>
+          <div class="a"><b>😁 APRÈS</b>Nanomboka nilamina ilay torimaso tapatapaka, ary matanjaka tsara vao mifoha ny maraina.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="shot"><img src="images/stab_02.jpg" alt="Moins de stress. Je me sens plus léger." onerror="this.parentNode.classList.add('missing')"><div class="slot">images/stab_02.jpg</div></div>
+      <div class="body">
+        <h3>🏅 Moins de stress. Je me sens plus léger.</h3>
+        <p class="quote">« Hita miova ny fahatsapako ny tenako. Miova koa ny fijeriko ny fanarahana regime. Lasa zavatra tsara fa tsy obligation fotsiny. »</p>
+      </div>
+    </div>
+
     <p class="note">Ireo vokatra ireo dia azon'ireo vehivavy nampiasa <strong>ity méthode ity</strong>.<span class="sp"></span>Tsy mitovy amin'ny rehetra ny vokatra.</p>
     <p class="center" style="font-family:Montserrat,Arial,sans-serif;font-weight:900;font-size:1.25rem;color:var(--prune);margin-top:22px">🏆 Ianao no hijoro vavolombelona manaraka.</p>
+
+    <!-- CTA après les preuves -->
+    <a class="btn" href="#prix">Hanomboka hanena lanja aho</a>
+    <p class="cta-note">⚡ Accès avy hatrany · 4 videos + Support + Bonus WhatsApp · Indray mividy fotsiny</p>
   </div>
 </section>
+
+<!-- ===================== NUTRITION STABILISATEUR + OBJECTIONS ===================== -->
+<section class="objs">
+  <div class="wrap wide">
+    <div class="mh">
+      <div class="mh-text">
+        <p class="mh-eyebrow">Raha te hiena toy ireo olona ireo koa ianao, ity no <strong>methode exacte</strong> nampiasainy...</p>
+        <h2 class="big mh-title">Chrono-<span class="red">nutrition</span></h2>
+        <p class="mh-lead">Fomba fisakafoana mifototra amin'ny <strong>cycle naturel</strong> ny vatana, natao hampiditra azy amin'ny mode brûlage mba <mark>hanena lanja</mark>, tsy misy régime sy sport mandreraka.</p>
+        <p class="mh-proof"><i>✔</i><span>Efa nampiasain'ireo vehivavy hita etsy ambony izy.</span></p>
+      </div>
+      <figure class="hero-img">
+        <svg viewBox="0 0 520 300" role="img" aria-label="Assiette en forme d'horloge, avec fourchette et couteau: chrono-nutrition">
+          <circle cx="260" cy="150" r="124" fill="#fff" opacity=".1"/>
+          <circle cx="260" cy="150" r="112" fill="#fff"/>
+          <circle cx="260" cy="150" r="88" fill="#F1F5DC"/>
+          <circle cx="260" cy="150" r="84" fill="#fff" stroke="#0B4A20" stroke-width="5"/>
+          <line x1="260.0" y1="70.0" x2="260.0" y2="86.0" stroke="#0B4A20" stroke-width="4" stroke-linecap="round"/><line x1="300.0" y1="80.7" x2="295.5" y2="88.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="329.3" y1="110.0" x2="321.5" y2="114.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="340.0" y1="150.0" x2="324.0" y2="150.0" stroke="#0B4A20" stroke-width="4" stroke-linecap="round"/><line x1="329.3" y1="190.0" x2="321.5" y2="185.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="300.0" y1="219.3" x2="295.5" y2="211.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="260.0" y1="230.0" x2="260.0" y2="214.0" stroke="#0B4A20" stroke-width="4" stroke-linecap="round"/><line x1="220.0" y1="219.3" x2="224.5" y2="211.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="190.7" y1="190.0" x2="198.5" y2="185.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="180.0" y1="150.0" x2="196.0" y2="150.0" stroke="#0B4A20" stroke-width="4" stroke-linecap="round"/><line x1="190.7" y1="110.0" x2="198.5" y2="114.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/><line x1="220.0" y1="80.7" x2="224.5" y2="88.5" stroke="#0B4A20" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="260" y1="150" x2="220.2" y2="127.0" stroke="#0B4A20" stroke-width="6" stroke-linecap="round"/>
+          <line x1="260" y1="150" x2="313.7" y2="119.0" stroke="#0B4A20" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="260" cy="150" r="8" fill="#A6C13A" stroke="#0B4A20" stroke-width="3"/>
+          <g fill="#A6C13A">
+            <rect x="74" y="64" width="5" height="46" rx="2.5"/><rect x="85" y="64" width="5" height="46" rx="2.5"/><rect x="96" y="64" width="5" height="46" rx="2.5"/><rect x="107" y="64" width="5" height="46" rx="2.5"/>
+            <path d="M74,102 H112 V116 Q112,132 98.5,136 V232 Q98.5,240 93,240 Q87.5,240 87.5,232 V136 Q74,132 74,116 Z"/>
+            <path d="M432,64 Q468,78 464,142 V156 H432 Z"/>
+            <rect x="432" y="156" width="14" height="84" rx="7"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
+<section class="get">
+  <div class="wrap wide">
+    <h2 class="big">Ny ho azonao</h2>
+    <p style="text-align:center;font-weight:700;margin:0 0 18px">4 videos + Support pratique étape par étape</p>
+    <div class="getgrid">
+      <div class="gcard"><div class="ic">1</div><div class="gb"><h3>Fantaro Ilay vatanao</h3><p class="dl"><b>Video</b><span>Ny heure exactes tokony hisakafoana hidiranao amin'ny mode brûlage</span></p><p class="bn"><i>✔</i><span>Hatory tsara, hifoha matanjaka, ary hiditra amin'ny mode brûlage ny vatanao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">2</div><div class="gb"><h3>Amboary ny filaharan'ny sakafo</h3><p class="dl"><b>Video</b><span>Ny filaharan'ny sakafo hoanina mba tsy hampanoana lava anao intsony</span></p><p class="bn"><i>✔</i><span>Tsy mizihatra sy tsy misy rivotra intsony ny kibonao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">3</div><div class="gb"><h3>Mihinàna ny sakafo stabilisateur</h3><p class="dl"><b>Video + Support</b><span>Liste ny aliment stabilisateur</span></p><p class="bn"><i>✔</i><span>Voky tsara ianao, ka tsy mitady grignotage intsony.</span></p><p class="val"><span>Valeur</span><b>25 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">4</div><div class="gb"><h3>Ampiharo ny formule secret an'ny assiette</h3><p class="dl"><b>Video</b><span>Ny formulen'ny assiette ho an'ny olona manena tena, (tsy régime ity)</span></p><p class="bn"><i>✔</i><span>Mihena ny tour de taille, nefa tsy mila coach isan'andro.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">5</div><div class="gb"><h3>7 recettes types</h3><p class="dl"><b>Support</b><span>Recettes tsotra azo ampiharina avy hatrany, manaraka iretsy methode ambony.</span></p><p class="bn"><i>✔</i><span>Tsy mila mieritreritra intsony hoe inona no hohanina.</span></p><p class="val"><span>Valeur</span><b>12 000 Ar</b></p></div></div>
+          <div class="gcard bonus"><div class="ic">+</div><div class="gb"><h3>BONUS · Suivi groupé WhatsApp</h3><p class="dl"><b>Bonus</b><span>Fanampiana sy fanarahana ao amin'ny groupe WhatsApp</span></p><p class="bn"><i>✔</i><span>Hahafahana manotany izay tsy azo sy manitikitika anao, mba hahazoanao resultat haingana kokoa.</span></p><p class="val"><span>Valeur</span><b>30 000 Ar</b></p></div></div>
+    </div>
+    <div class="tot">
+      <div><span>Valeur an'ny 5 dingana</span><b>97 000 Ar</b></div>
+      <div><span>Bonus</span><b>30 000 Ar</b></div>
+      <div class="all"><span>Valeur totale</span><b><s>127 000 Ar</s></b></div>
+      <div class="pay-now"><span>Ireo rehetre ireo ho azonao amin'ny vidiny</span><b>55 000 Ar</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MOCKUP CE QU'ELLE REÇOIT ===================== -->
+<section class="rcv">
+  <div class="wrap wide">
+    <h2 class="big">Ny ho azonao ao amin'ny Chrono-nutrition</h2>
+    <div class="devices">
+      <svg viewBox="0 0 760 440" role="img" aria-label="Video, support pratique ary bonus WhatsApp amin'ny ordinatera, tablette ary telefaona">
+        <defs>
+          <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B4A20"/><stop offset="1" stop-color="#1F6B30"/></linearGradient>
+          <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#073515" flood-opacity=".28"/></filter>
+        </defs>
+        <ellipse cx="380" cy="420" rx="330" ry="14" fill="#073515" opacity=".08"/>
+        <!-- ordinateur / video -->
+        <g filter="url(#sh)">
+          <rect x="175" y="18" width="430" height="270" rx="16" fill="#073515"/>
+          <rect x="187" y="30" width="406" height="244" rx="9" fill="url(#scr)"/>
+          <text x="207" y="58" font-size="12" font-weight="700" letter-spacing="2" fill="#A6C13A" font-family="Montserrat,Arial,sans-serif">CHRONO-NUTRITION</text>
+          <circle cx="390" cy="150" r="40" fill="#A6C13A"/>
+          <path d="M378,130 L412,150 L378,170 Z" fill="#073515"/>
+          <text x="272" y="232" font-size="14.5" font-weight="700" fill="#fff" font-family="Montserrat,Arial,sans-serif">Video 1 · Fantaro Ilay vatanao</text>
+          <rect x="272" y="248" width="236" height="6" rx="3" fill="#ffffff" opacity=".22"/>
+          <rect x="272" y="248" width="86" height="6" rx="3" fill="#A6C13A"/>
+          <rect x="350" y="288" width="80" height="28" fill="#0F5A28"/>
+          <rect x="296" y="312" width="188" height="11" rx="5.5" fill="#073515"/>
+        </g>
+        <!-- tablette / support -->
+        <g filter="url(#sh)">
+          <rect x="14" y="150" width="236" height="272" rx="24" fill="#073515"/>
+          <rect x="24" y="160" width="216" height="252" rx="15" fill="#FDF1E6"/>
+          <text x="36" y="188" font-size="14" font-weight="800" fill="#073515" font-family="Montserrat,Arial,sans-serif">Support pratique</text>
+          <text x="36" y="205" font-size="10.5" fill="#55665A" font-family="Open Sans,Arial,sans-serif">7 recettes types</text>
+          <rect x="32" y="220" width="186" height="52" rx="10" fill="#fff"/><rect x="40" y="227" width="38" height="38" rx="8" fill="#A6C13A"/><text x="88" y="245" font-size="12" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">Recette 1</text><rect x="88" y="253" width="96" height="6" rx="3" fill="#EADFCB"/>
+          <rect x="32" y="278" width="186" height="52" rx="10" fill="#fff"/><rect x="40" y="285" width="38" height="38" rx="8" fill="#A6C13A"/><text x="88" y="303" font-size="12" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">Recette 2</text><rect x="88" y="311" width="96" height="6" rx="3" fill="#EADFCB"/>
+          <rect x="32" y="336" width="186" height="52" rx="10" fill="#fff"/><rect x="40" y="343" width="38" height="38" rx="8" fill="#A6C13A"/><text x="88" y="361" font-size="12" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">Recette 3</text><rect x="88" y="369" width="96" height="6" rx="3" fill="#EADFCB"/>
+        </g>
+        <!-- telephone -->
+        <g filter="url(#sh)">
+          <rect x="522" y="78" width="200" height="350" rx="32" fill="#073515"/>
+          <rect x="532" y="88" width="180" height="330" rx="24" fill="#FDF1E6"/>
+          <rect x="532" y="88" width="180" height="62" rx="24" fill="#0B4A20"/>
+          <rect x="532" y="126" width="180" height="24" fill="#0B4A20"/>
+          <rect x="598" y="95" width="48" height="8" rx="4" fill="#073515"/>
+          <text x="622" y="134" font-size="12" font-weight="800" letter-spacing="1.5" text-anchor="middle" fill="#fff" font-family="Montserrat,Arial,sans-serif">CHRONO-NUTRITION</text>
+          <circle cx="558" cy="182" r="13" fill="#A6C13A"/><path d="M554,176 L565,182 L554,188 Z" fill="#073515"/><text x="580" y="181" font-size="9.5" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">1 · Fantaro Ilay vatanao</text><text x="580" y="195" font-size="10" fill="#55665A" font-family="Open Sans,Arial,sans-serif">Video</text>
+          <circle cx="558" cy="230" r="13" fill="#A6C13A"/><path d="M554,224 L565,230 L554,236 Z" fill="#073515"/><text x="580" y="229" font-size="9.5" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">2 · Filaharan'ny sakafo</text><text x="580" y="243" font-size="10" fill="#55665A" font-family="Open Sans,Arial,sans-serif">Video</text>
+          <circle cx="558" cy="278" r="13" fill="#A6C13A"/><path d="M554,272 L565,278 L554,284 Z" fill="#073515"/><text x="580" y="277" font-size="9.5" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">3 · Sakafo stabilisateur</text><text x="580" y="291" font-size="10" fill="#55665A" font-family="Open Sans,Arial,sans-serif">Video + Support</text>
+          <circle cx="558" cy="326" r="13" fill="#A6C13A"/><path d="M554,320 L565,326 L554,332 Z" fill="#073515"/><text x="580" y="325" font-size="9.5" font-weight="700" fill="#073515" font-family="Montserrat,Arial,sans-serif">4 · Formule assiette</text><text x="580" y="339" font-size="10" fill="#55665A" font-family="Open Sans,Arial,sans-serif">Video</text>
+          <rect x="544" y="362" width="156" height="36" rx="18" fill="#A6C13A"/>
+          <text x="622" y="385" font-size="11.5" font-weight="800" text-anchor="middle" fill="#073515" font-family="Montserrat,Arial,sans-serif">+ Bonus · Suivi WhatsApp</text>
+        </g>
+      </svg>
+    </div>
+    <ul class="chips"><li>4 videos</li><li>Support pratique</li><li>Bonus : suivi groupé WhatsApp</li></ul>
+  </div>
+</section>
+
+<!-- ===================== COMPTE A REBOURS ===================== -->
+<section class="cdsec">
+  <div class="wrap">
+    <div class="lbl">⏳ Hikatona ny fisoratana anarana afaka:</div>
+    <div class="cd">
+      <div><b id="cd-d">--</b><span>Andro</span></div>
+      <div><b id="cd-h">--</b><span>Ora</span></div>
+      <div><b id="cd-m">--</b><span>Minitra</span></div>
+      <div><b id="cd-s">--</b><span>Segonda</span></div>
+    </div>
+    <p class="urgline">Aorian'io daty io <strong>mikatona</strong> ny tolotra.</p>
+  </div>
+</section>
+
+<!-- ===================== PRIX ===================== -->
+<section class="pricing" id="prix">
+  <div class="wrap">
+    <div class="order">
+      <div class="ribbon">Prix de lancement</div>
+      <p class="old">Valeur totale: <s>127 000 Ar</s></p>
+      <div class="now"><span>55 000 Ar</span></div>
+      <p style="margin:0;font-weight:600">Indray mividy fotsiny. Anao mandrakizay Ilay fomba.<br>Vidiny kely mba ho azon'ny rehetra ny manomboka.</p>
+      <ul>
+        <li>Heure exactes fihinanana sakafo <em>(video)</em></li>
+        <li>Ordre fihinanana sakafo <em>(video)</em></li>
+        <li>Liste ny aliment stabilisateur <em>(video + Support)</em></li>
+        <li>Formule assiette <em>(video)</em></li>
+        <li>7 recettes types <em>(support)</em></li>
+        <li>BONUS: Suivi groupé WhatsApp</li>
+      </ul>
+      <div class="paybox">
+        <div class="pt">💳 Ahoana ny fandoavana ?</div>
+        <div class="payfact"><div><small>Vola aloa</small><b>55 000 Ar</b></div><div><small>MVola</small><b>034 71 128 57</b></div></div>
+        <div class="row"><span>1</span><div>Alefaso ny <b>Ar 55 000</b> amin’ny <b>MVola</b> any amin’ny <b class="num" id="mvnum">034 71 128 57</b> <button type="button" class="copybtn" id="copyBtn">Adikao</button></div></div>
+        <div class="row"><span>2</span><div>Soraty etsy ambany ny <b>référence</b></div></div>
+        <div class="row"><span>3</span><div>Tsindrio ity bokotra etsy ambany ity handefasana ny référence amin'ny <b>WhatsApp</b></div></div>
+      </div>
+
+      <!-- Formulaire référence -> WhatsApp -->
+      <form class="refform" id="refForm" novalidate>
+        <label for="ref">Référence an'ny transaction MVola</label>
+        <input id="ref" name="ref" type="text" inputmode="text" autocomplete="off" placeholder="Soraty eto ny référence" required>
+        <div class="err" id="refErr" role="alert"></div>
+        <button class="btn" type="submit">Handefa réference hakàna ny methode aho</button>
+        <p class="after">Azo idirana avy hatrany ny méthode aorian'ny fandraisana ny référence.</p>
+      </form>
+      <ul class="trust"><li>⚡ Accès avy hatrany</li><li>🎥 4 videos + Support</li><li>💬 Fanampiana amin'ny WhatsApp</li></ul>
+      <p class="askwa">Mbola misalasala ? <a id="askLink" href="#">Soraty amin'ny WhatsApp ny fanontanianao</a></p>
+    </div>
+  </div>
+</section>
+
 
 <!-- ===================== URGENCE ===================== -->
 <div class="urgent">
   <div class="wrap">
     <h2>⏳ Hikatona ny 31 Oktobra ny fisoratana anarana</h2>
-    <p>Aorian'io daty io dia <strong>mikatona</strong> ny tolotra.<span class="sp"></span>Ny fisokafana manaraka dia ho amin'ny <strong>vidiny ambony kokoa</strong>,<br>ary tsy fantatra ny daty.</p>
-    <p>Tonga ny fety faran'ny taona.<span class="sp"></span>Raha manomboka izao ianao,<br>hainao ny mitazona Ilay lanja alohan'ny fety.</p>
+    <p>Aorian'io daty io dia <strong>mikatona</strong> ny tolotra.</p>
   </div>
 </div>
 
@@ -585,19 +797,21 @@
     <p>Raha anisan'ilay vehivavy mitady hirika hivoahana amin'io effort bé io ianao, dia…</p>
 
     <!-- CTA 3 : après FAQ -> prix -->
-    <a class="btn" href="#prix">Hijery ny vidiny</a>
+    <p class="cta-dl">⏳ Hikatona ny 31 Oktobra ny tolotra.</p>
+    <a class="btn" href="#prix">Hampiatra ny Chrono-nutrition</a>
+    <p class="cta-note">⚡ Accès avy hatrany · 4 videos + Support + Bonus WhatsApp · Indray mividy fotsiny</p>
+    <a class="btn2" id="askLink2" href="#">Mbola misalasala ? Soraty amin'ny WhatsApp ny fanontanianao</a>
 
     <div class="sign">
       <p style="margin:0">Mirary forme ho anao aho,</p>
       <b>Joela</b> — Chronobiologiste
     </div>
-    <div class="ps"><b>PS:</b> Hikatona ny 31 Oktobra ny tolotra. Ny fisokafana manaraka dia amin'ny vidiny ambony kokoa.</div>
+    <div class="ps"><b>PS:</b> Hikatona ny 31 Oktobra ny tolotra.</div>
   </div>
 </section>
 
-<div class="stick" id="stick"><a href="#prix">Hampiatra ny méthode</a></div>
 
-<footer><div class="wrap">© Joela — Chronobiologiste · Nutrition Stabilisateur</div></footer>
+<footer><div class="wrap">© Joela — Chronobiologiste · Chrono-nutrition</div></footer>
 
 <script>
   // ---- A MODIFIER ----
@@ -618,7 +832,7 @@
       var all = document.querySelectorAll(".btn");
       for (var i = 0; i < all.length; i++){
         all[i].classList.add("disabled");
-        all[i].innerHTML = "Mikatona ny fisoratana anarana<small>Miandrasa ny fisokafana manaraka</small>";
+        all[i].innerHTML = "Mikatona ny fisoratana anarana";
       }
       return;
     }
@@ -641,7 +855,9 @@
   });
 
   // ---- Question avant achat -> WhatsApp ----
-  document.getElementById("askLink").href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Manana fanontaniana aho momba ny Nutrition Stabilisateur");
+  var askUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Manana fanontaniana aho momba ny Chrono-nutrition");
+  document.getElementById("askLink").href = askUrl;
+  var ask2 = document.getElementById("askLink2"); if (ask2) ask2.href = askUrl;
 
   // ---- Barre CTA collante : visible après le hero, cachée sur le prix ----
   (function(){
@@ -669,7 +885,7 @@
       return;
     }
     input.classList.remove("bad"); err.textContent = "";
-    var msg = "Nutrition Stabilisateur ity ny reference : " + ref;
+    var msg = "Chrono-nutrition ity ny reference : " + ref;
     window.location.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
   });
   document.getElementById("ref").addEventListener("input", function(){
