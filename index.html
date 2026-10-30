@@ -439,6 +439,31 @@
   .top .tc i b{display:block;margin:0;padding:0;border:0;background:none;font-size:1.3rem;font-weight:800;letter-spacing:.02em;color:#fff;font-variant-numeric:tabular-nums}
   .top .tc i u{text-decoration:none;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C2D96A}
 
+  /* ---------- liste bénéfices (mini hero) ---------- */
+  .mh-ben{margin-top:48px;padding:32px 34px;border:1px solid rgba(255,255,255,.18);border-radius:20px;background:rgba(255,255,255,.06)}
+  .mh-ben-t{margin:0 0 20px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#C2D96A}
+  .mh-ben ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 36px}
+  .mh-ben li{display:flex;align-items:flex-start;gap:12px;color:#E4EDCB;font-size:1.05rem;line-height:1.5;font-weight:500}
+  .mh-ben li strong{color:#fff;font-weight:700}
+  .mh-ben li i{flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--yellow);color:var(--prune-d);font-style:normal;font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center}
+  @media (max-width:820px){.mh-ben{padding:24px 20px;margin-top:36px}.mh-ben ul{grid-template-columns:1fr;gap:12px}}
+
+  /* ---------- bénéfices : liste simple ---------- */
+  .mh-ben2{margin-top:56px;max-width:760px;margin-left:auto;margin-right:auto}
+  .mh-ben2 .mh-ben-t{text-align:left;margin-bottom:8px;font-size:.85rem}
+  .blist{list-style:none;margin:0;padding:0}
+  .blist li{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-top:1px solid rgba(255,255,255,.16)}
+  .blist li:first-child{border-top:0}
+  .blist li > i{flex:none;width:30px;height:30px;margin-top:2px;border-radius:50%;background:var(--yellow);color:var(--prune-d);font-style:normal;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+  .blist h3{margin:0 0 8px;font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.25rem;color:#fff}
+  .blist p{margin:0 0 6px;color:#E4EDCB;font-size:1.05rem;line-height:1.6}
+  .blist p:last-child{margin-bottom:0}
+  .blist p u{display:block;text-decoration:none;margin-bottom:1px;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9FB86A}
+  .blist p.f{color:#fff;font-weight:600;margin-top:10px}
+  .blist p.f u{color:#C2D96A}
+  .blist strong{color:#fff;font-weight:700}
+  @media (max-width:820px){.mh-ben2{margin-top:40px}.blist li{gap:14px;padding:20px 0}}
+
   /* ---------- mobile ---------- */
   @media (max-width:720px){
     .cd{gap:8px}
@@ -535,9 +560,6 @@
       <p>Ka normale ihany ny mitombo ny lanja,<br>satria ireny no hohanina.</p>
       <p><strong>Nanao ny zavatra rehetra ianao,<br>fa tamin'ny <mark>fotoana diso</mark>, tamin'ny <mark>filaharana diso</mark>.</strong></p>
 
-      <p style="margin-top:2em">Isaky ny miverina ny lanja,<br>mihamafy ny hevitrao hoe ianao no diso.<br>Mihena ny fahatokiana tena.<br>Mihamaivana ny fanantenana.</p>
-      <p>Dia kivy, ary manomboka indray ihany.</p>
-      <p>Fa tsy fahalemena izany.<br>Ny vatanao no tsy hita fotoana tsara.</p>
 
       <p style="margin-top:2em">Ka ny fomba vaovao dia mifantoka amin'ny <strong>cycle naturel</strong> ny vatana.<br>Ny <strong>fotoana</strong>, ny <strong>filaharan'ny sakafo</strong>,<br>ary ny sakafo mahavoky marina no araka ny cycle.</p>
       <p>Rehefa arahina io,<br>dia miditra amin'ny <strong>mode brûlage</strong> ny vatana.<br>Mandoro ny tavy izy, indrindra ny kibo,<br>tsy misy régime sy sport mandreraka.</p>
@@ -659,27 +681,14 @@
         </svg>
       </figure>
     </div>
-  </div>
-</section>
-
-<!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
-<section class="get">
-  <div class="wrap wide">
-    <h2 class="big">Ny ho azonao</h2>
-    <p style="text-align:center;font-weight:700;margin:0 0 18px">4 videos + Support pratique étape par étape</p>
-    <div class="getgrid">
-      <div class="gcard"><div class="ic">1</div><div class="gb"><h3>Fantaro Ilay vatanao</h3><p class="dl"><b>Video</b><span>Ny heure exactes tokony hisakafoana hidiranao amin'ny mode brûlage</span></p><p class="bn"><i>✔</i><span>Hatory tsara, hifoha matanjaka, ary hiditra amin'ny mode brûlage ny vatanao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
-      <div class="gcard"><div class="ic">2</div><div class="gb"><h3>Amboary ny filaharan'ny sakafo</h3><p class="dl"><b>Video</b><span>Ny filaharan'ny sakafo hoanina mba tsy hampanoana lava anao intsony</span></p><p class="bn"><i>✔</i><span>Tsy mizihatra sy tsy misy rivotra intsony ny kibonao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
-      <div class="gcard"><div class="ic">3</div><div class="gb"><h3>Mihinàna ny sakafo stabilisateur</h3><p class="dl"><b>Video + Support</b><span>Liste ny aliment stabilisateur</span></p><p class="bn"><i>✔</i><span>Voky tsara ianao, ka tsy mitady grignotage intsony.</span></p><p class="val"><span>Valeur</span><b>25 000 Ar</b></p></div></div>
-      <div class="gcard"><div class="ic">4</div><div class="gb"><h3>Ampiharo ny formule secret an'ny assiette</h3><p class="dl"><b>Video</b><span>Ny formulen'ny assiette ho an'ny olona manena tena, (tsy régime ity)</span></p><p class="bn"><i>✔</i><span>Mihena ny tour de taille, nefa tsy mila coach isan'andro.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
-      <div class="gcard"><div class="ic">5</div><div class="gb"><h3>7 recettes types</h3><p class="dl"><b>Support</b><span>Recettes tsotra azo ampiharina avy hatrany, manaraka iretsy methode ambony.</span></p><p class="bn"><i>✔</i><span>Tsy mila mieritreritra intsony hoe inona no hohanina.</span></p><p class="val"><span>Valeur</span><b>12 000 Ar</b></p></div></div>
-          <div class="gcard bonus"><div class="ic">+</div><div class="gb"><h3>BONUS · Suivi groupé WhatsApp</h3><p class="dl"><b>Bonus</b><span>Fanampiana sy fanarahana ao amin'ny groupe WhatsApp</span></p><p class="bn"><i>✔</i><span>Hahafahana manotany izay tsy azo sy manitikitika anao, mba hahazoanao resultat haingana kokoa.</span></p><p class="val"><span>Valeur</span><b>30 000 Ar</b></p></div></div>
-    </div>
-    <div class="tot">
-      <div><span>Valeur an'ny 5 dingana</span><b>97 000 Ar</b></div>
-      <div><span>Bonus</span><b>30 000 Ar</b></div>
-      <div class="all"><span>Valeur totale</span><b><s>127 000 Ar</s></b></div>
-      <div class="pay-now"><span>Ireo rehetre ireo ho azonao amin'ny vidiny</span><b>55 000 Ar</b></div>
+    <div class="mh-ben2">
+      <p class="mh-ben-t">Ny fiovana ho hitanao</p>
+      <ul class="blist">
+        <li><i>1</i><div><h3>Kibo sy lanja</h3><p class="a">Mihena ny kibo sy ny lanja. Nisy vehivavy nahita <strong>-11 cm tao anatin'ny 2 herinandro</strong>.</p><p class="f">Maivana ny vatana, mety amin'ny akanjo indray, ary <strong>tsy menatra intsony</strong> rehefa mivoaka ny trano.</p></div></li>
+        <li><i>2</i><div><h3>Grignotage sy kibo mizihatra</h3><p class="a"><strong>Mitsahatra ny grignotage.</strong> Tsy mizihatra sy tsy misy rivotra intsony ny kibo.</p><p class="f">Tsy mieritreritra hoe « inona no hohanina » intsony: <strong>milamina ny fisakafoana</strong>.</p></div></li>
+        <li><i>3</i><div><h3>Angovo sy torimaso</h3><p class="a">Hatory tsara, <strong>hifoha matanjaka</strong>.</p><p class="f"><strong>Tsy reraka</strong> ianao miatrika ny tontolo andro, tsy misy <strong>discipline</strong> mila arahana be toy ny teo aloha.</p></div></li>
+        <li><i>4</i><div><h3>Fahatokiana tena</h3><p class="a"><strong>Tsy kivy intsony</strong> rehefa mijery fitaratra.</p><p class="f">Manomboka <strong>ho tia ny vatanao</strong> ianao, ary hiverina <strong>hatoky tena kokoa</strong>.</p></div></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -736,6 +745,26 @@
       </svg>
     </div>
     <ul class="chips"><li>4 videos</li><li>Support pratique</li><li>Bonus : suivi groupé WhatsApp</li></ul>
+  </div>
+</section>
+
+<!-- ===================== CE QU'ELLE REÇOIT / QUI ===================== -->
+<section class="get">
+  <div class="wrap wide">
+    <div class="getgrid" style="margin-top:0">
+      <div class="gcard"><div class="ic">1</div><div class="gb"><h3>Fantaro Ilay vatanao</h3><p class="dl"><b>Video</b><span>Ny heure exactes tokony hisakafoana hidiranao amin'ny mode brûlage</span></p><p class="bn"><i>✔</i><span>Hatory tsara, hifoha matanjaka, ary hiditra amin'ny mode brûlage ny vatanao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">2</div><div class="gb"><h3>Amboary ny filaharan'ny sakafo</h3><p class="dl"><b>Video</b><span>Ny filaharan'ny sakafo hoanina mba tsy hampanoana lava anao intsony</span></p><p class="bn"><i>✔</i><span>Tsy mizihatra sy tsy misy rivotra intsony ny kibonao.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">3</div><div class="gb"><h3>Mihinàna ny sakafo stabilisateur</h3><p class="dl"><b>Video + Support</b><span>Liste ny aliment stabilisateur</span></p><p class="bn"><i>✔</i><span>Voky tsara ianao, ka tsy mitady grignotage intsony.</span></p><p class="val"><span>Valeur</span><b>25 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">4</div><div class="gb"><h3>Ampiharo ny formule secret an'ny assiette</h3><p class="dl"><b>Video</b><span>Ny formulen'ny assiette ho an'ny olona manena tena, (tsy régime ity)</span></p><p class="bn"><i>✔</i><span>Mihena ny tour de taille, nefa tsy mila coach isan'andro.</span></p><p class="val"><span>Valeur</span><b>20 000 Ar</b></p></div></div>
+      <div class="gcard"><div class="ic">5</div><div class="gb"><h3>7 recettes types</h3><p class="dl"><b>Support</b><span>Recettes tsotra azo ampiharina avy hatrany, manaraka iretsy methode ambony.</span></p><p class="bn"><i>✔</i><span>Tsy mila mieritreritra intsony hoe inona no hohanina.</span></p><p class="val"><span>Valeur</span><b>12 000 Ar</b></p></div></div>
+          <div class="gcard bonus"><div class="ic">+</div><div class="gb"><h3>BONUS · Suivi groupé WhatsApp</h3><p class="dl"><b>Bonus</b><span>Fanampiana sy fanarahana ao amin'ny groupe WhatsApp</span></p><p class="bn"><i>✔</i><span>Hahafahana manotany izay tsy azo sy manitikitika anao, mba hahazoanao resultat haingana kokoa.</span></p><p class="val"><span>Valeur</span><b>30 000 Ar</b></p></div></div>
+    </div>
+    <div class="tot">
+      <div><span>Valeur an'ny 5 dingana</span><b>97 000 Ar</b></div>
+      <div><span>Bonus</span><b>30 000 Ar</b></div>
+      <div class="all"><span>Valeur totale</span><b><s>127 000 Ar</s></b></div>
+      <div class="pay-now"><span>Ireo rehetre ireo ho azonao amin'ny vidiny</span><b>55 000 Ar</b></div>
+    </div>
   </div>
 </section>
 
