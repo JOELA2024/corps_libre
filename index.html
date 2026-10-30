@@ -431,6 +431,13 @@
   .payfact small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
   .payfact b{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.1rem;color:var(--prune-d);white-space:nowrap}
 
+  /* ---------- compteur du haut : plus lisible ---------- */
+  .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:10px 14px;font-size:.78rem;letter-spacing:.1em}
+  .top .tc{display:inline-flex;gap:6px;margin:0}
+  .top .tc i{font-style:normal;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:50px;padding:5px 8px 4px;border-radius:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);line-height:1.1}
+  .top .tc i b{display:block;margin:0;padding:0;border:0;background:none;font-size:1.3rem;font-weight:800;letter-spacing:.02em;color:#fff;font-variant-numeric:tabular-nums}
+  .top .tc i u{text-decoration:none;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C2D96A}
+
   /* ---------- mobile ---------- */
   @media (max-width:720px){
     .cd{gap:8px}
@@ -461,7 +468,7 @@
 </head>
 <body>
 
-<div class="top">⏳ Hikatona afaka: <b id="cd">--</b></div>
+<div class="top"><span class="tl">⏳ Hikatona afaka:</span><span class="tc" id="cd">--</span></div>
 
 <!-- ===================== HERO ===================== -->
 <header class="hero">
@@ -546,6 +553,13 @@
   <div class="wrap">
     <div class="stars">★★★★★</div>
     <h2 class="big">Rehefa narahina ny <span class="red">cycle naturel</span>, ireto no hita</h2>
+    <div class="proof">
+      <div class="shot"><img src="images/preuve_kit_03.jpeg" alt="Kibo 93 lasa niena 74" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/preuve_kit_03.jpeg</div></div>
+      <div class="body">
+        <h3>🏅 Kibo 93 lasa niena 74</h3>
+        <p class="quote">« Zao efa ça va, n'y kibo Téo aloha 93, Zao lasa 74… Téo aloha mora reraka bé, fa Zao efa tena matanjaka… Zao lasa falifaly foana. »</p>
+      </div>
+    </div>
     <div class="proof">
       <div class="shot" id="s1"><img src="images/proof%20pp%20(2).jpg" alt="Kibo nihena 11 cm" onerror="this.parentNode.classList.add('missing')"><div class="slot">images/proof%20pp%20(2).jpg</div></div>
       <div class="body">
@@ -838,7 +852,7 @@
     }
     var d = Math.floor(diff / 86400000), h = Math.floor(diff % 86400000 / 3600000),
         m = Math.floor(diff % 3600000 / 60000), s = Math.floor(diff % 60000 / 1000);
-    el.textContent = d + "j  " + pad(h) + "h  " + pad(m) + "m  " + pad(s) + "s";
+    el.innerHTML = [[d,"Andro"],[h,"Ora"],[m,"Min"],[s,"Seg"]].map(function(x){ return "<i><b>" + pad(x[0]) + "</b><u>" + x[1] + "</u></i>"; }).join("");
     document.getElementById("cd-d").textContent = pad(d);
     document.getElementById("cd-h").textContent = pad(h);
     document.getElementById("cd-m").textContent = pad(m);
